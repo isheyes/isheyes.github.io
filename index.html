@@ -255,8 +255,209 @@
             
               
                 
+                <a class="post-title-link" href="/2015/01/08/code3/" itemprop="url">
+                  《代码大全2》要点摘要（三）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-01-08T22:55:34+08:00" content="2015-01-08">
+              2015-01-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/读书/" itemprop="url" rel="index">
+                    <span itemprop="name">读书</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/01/08/code3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/08/code3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/01/08/code3/" class="leancloud_visitors" data-flag-title="《代码大全2》要点摘要（三）">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="第七章、高质量的子程序"><a href="#第七章、高质量的子程序" class="headerlink" title="第七章、高质量的子程序"></a>第七章、高质量的子程序</h3><h4 id="7-1、什么是子程序？"><a href="#7-1、什么是子程序？" class="headerlink" title="7.1、什么是子程序？"></a>7.1、什么是子程序？</h4><blockquote>
+<p>子程序就是为实现一个特定的目的而编写的一个可被调用的方法（method）或过程（procedure）。就是我们开发中常说的方法。</p>
+</blockquote>
+<h5 id="总结：创建子程序的理由"><a href="#总结：创建子程序的理由" class="headerlink" title="总结：创建子程序的理由"></a>总结：创建子程序的理由</h5><ul>
+<li>降低复杂度</li>
+<li>引入中间的、易懂的抽象</li>
+<li>避免代码重复</li>
+<li>支持子类化</li>
+<li>隐藏顺序</li>
+<li>隐藏指针操作</li>
+<li>提高可移植性</li>
+<li>简化复杂的逻辑判断</li>
+<li>改善性能<br>除此之外，创建类的很多理由也是创建子程序的理由</li>
+<li>隔离复杂度</li>
+<li>隐藏实现细节</li>
+<li>限制变化所带来的影响</li>
+<li>隐藏全局数据</li>
+<li>形成中央控制点</li>
+<li>促成可重用的代码</li>
+<li>达到特定的重构目的</li>
+</ul>
+<h4 id="7-2、在子程序层上设计"><a href="#7-2、在子程序层上设计" class="headerlink" title="7.2、在子程序层上设计"></a>7.2、在子程序层上设计</h4><blockquote>
+<p>对子程序而言，内聚性是指子程序中各种操作之间联系的紧密程度。有些程序员更喜欢使用“强度（strength）”这一术语：一个子程序中各种操作之间的联系有多强？像Cosine（）（余弦函数）这样的函数是极端内聚的，因为整个程序只完成一项功能。而CosineAndTan（）（余弦和正切）这个函数的内聚性相对较弱，因为它完成了多于一项的操作。我们的目标是让每一个子程序只把一件事做好，不再做任何其他事情。</p>
+</blockquote>
+<h4 id="7-3、好的子程序（方法）的名字"><a href="#7-3、好的子程序（方法）的名字" class="headerlink" title="7.3、好的子程序（方法）的名字"></a>7.3、好的子程序（方法）的名字</h4><ul>
+<li>描述子程序所做的所有事情，如一个方法的作用是计算报表总额并打开输出一个文件，如果把它命名为ComputeReportTotals（）就不算完整。但如果要命名为ComputeReportTotalsAndOpenOutputFile（）是很完整，但这样又感觉太长且有点傻。这里主要是因为这个子程序功能不够单一，产生了一些副作用，我们要做的就是换种编程方式，直截了当地解决问题而不产生副作用。</li>
+<li>避免使用无意义的、模糊或表达不清的动词，比如HandleOutput（）改为FormatAndPrintOutput（），就很容易看清这个子程序的功能了。</li>
+<li>不要仅通过数字来形成不同的子程序名字</li>
+<li>根据需要确定子程序名字的长度，研究表明，变量名的最佳长度是9到15个字符。子程序（方法）名字通常是跟在对象名字之后，这实际上为其免费提供了一部分名字。总的来说，给方法命名的中点是尽可能含义清晰，也就是说，子程序名的长短要视该名字是否清晰易懂而定。</li>
+<li>给函数命名时要对返回值有所描述。</li>
+<li>给过程起名时使用语气强烈的动词加宾语的形式。</li>
+<li><p>准确使用对仗词,常见对仗词组有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">add/remove</span><br><span class="line">begin/end</span><br><span class="line">create/destroy</span><br><span class="line">first/last</span><br><span class="line">get/put</span><br><span class="line">get/set</span><br><span class="line">increment/decrement</span><br><span class="line">insert/delete</span><br><span class="line">lock/unlock</span><br><span class="line">min/max</span><br><span class="line">next/previous</span><br><span class="line">old/new</span><br><span class="line">open/close</span><br><span class="line">show/hide</span><br><span class="line">source/target</span><br><span class="line">start/stop</span><br><span class="line">up/down</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为常用操作确立命名规则</p>
+</li>
+</ul>
+<h4 id="7-4、子程序可以写多长？"><a href="#7-4、子程序可以写多长？" class="headerlink" title="7.4、子程序可以写多长？"></a>7.4、子程序可以写多长？</h4><blockquote>
+<p>与其对子程序的长度强加限制，还不如让下面这些因素——如子程序的内聚性、嵌套的层次、变量的数量、决策点的数量、解释子程序用意所需的注释数量以及其他一些跟复杂度相关的考虑事项等——来决定子程序的长度。也就是，如果要编写一段超过200行代码的子程序，那么就要小心了。对于超过200行代码的子程序来说，没有哪项研究发现它能降低成本和/或降低出错率，而且超过200行后，你迟早会在可读性方面遇到问题。</p>
+</blockquote>
+<h4 id="7-5、如何使用子程序参数"><a href="#7-5、如何使用子程序参数" class="headerlink" title="7.5、如何使用子程序参数"></a>7.5、如何使用子程序参数</h4><ul>
+<li>如果几个子程序都使用了类似的一些参数，应该让这些参数的排列顺序保持一致。</li>
+<li>使用所有的参数。</li>
+<li>把状态或出错变量放在最后</li>
+<li>不要把子程序的参数用作工作变量</li>
+<li>在接口中对参数的假定加以说明</li>
+<li>把子程序的参数个数限制在大约7个以内。对于人的理解力来说，7是一个神奇的数字。心理学研究发现，通常人类很难同时记住超过7个单位的信息。这一发现已经用于各个领域之中，因此，假定人不能同时记住超过约7个的子程序参数，也是合适的。</li>
+</ul>
+<h4 id="本章要点："><a href="#本章要点：" class="headerlink" title="本章要点："></a>本章要点：</h4><ul>
+<li>创建子程序最主要的目的是提高程序的可管理性，当然也有其他一些好的理由。其中，节省代码空间只是一个次要原因；提高可读性、可靠性和可修改性原因都更重要一些。</li>
+<li>有时候把一些简单的操作写成独立的子程序也非常有价值。</li>
+<li>子程序可以按照内聚性分为很多类，而你应该让大多数子程序具有功能上的内聚性，这是最佳的一种内聚性。</li>
+<li>子程序的名字是它的质量的指示器。如果名字糟糕但恰如其分，那就说明这个子程序设计的很差劲。如果名字糟糕且又不准确，那么它就反应不出程序是干什么的。不管怎样，糟糕 名字都意味着程序需要修改。</li>
+</ul>
+<hr>
+<h3 id="第八章、防御式编程"><a href="#第八章、防御式编程" class="headerlink" title="第八章、防御式编程"></a>第八章、防御式编程</h3><h4 id="8-1什么是防御式编程？"><a href="#8-1什么是防御式编程？" class="headerlink" title="8.1什么是防御式编程？"></a>8.1什么是防御式编程？</h4><blockquote>
+<p>防御式编程并不是说让你编程时持“防备批评或攻击”的态度——“它就是这么工作”！这一概念来自防御式驾驶。在防御式驾驶中要建立这样一种思维，那就是你永远也不能确定另一位司机将要做什么。这样 才能确保在其他人做出危险动作时你也不会受到伤害。你要承担起保护自己的责任，哪怕是其他司机犯的错误。防御式编程的主要思想是：子程序应该不因传入错误数据而破坏，哪怕是其他子程序产生的错误数据。更一般的说，其核心想法是要承认程序都会有问题，都需要被修改，聪明的程序员应该根据这一点来编程序。</p>
+</blockquote>
+<hr>
+<h3 id="第九章、伪代码编程过程"><a href="#第九章、伪代码编程过程" class="headerlink" title="第九章、伪代码编程过程"></a>第九章、伪代码编程过程</h3><h4 id="9-1伪代码编程有什么好处？"><a href="#9-1伪代码编程有什么好处？" class="headerlink" title="9.1伪代码编程有什么好处？"></a>9.1伪代码编程有什么好处？</h4><ul>
+<li>伪代码使得评审更容易。</li>
+<li>伪代码支持反复迭代精化得思想。从一个高层设计开始，把这一设计精化为伪代码，然后再把伪代码精化为源代码。这样持续不断的小步精化，使你可以在把它推向更低的细节层次的同时，不断检查已形成的设计。这样做的结果，是你可能在最高的层次上发现最高层次的错误。在中间的层次上发现中间层次的错误，而在最低的层次上发现最低层次的错误——避免其中的任何错误变成真正的问题或者危害到更细节层次的工作。</li>
+<li>伪代码使变更更加容易。</li>
+<li>伪代码能使给代码作注释的工作量减到最少。</li>
+<li>伪代码比其他形式的设计文档更容易维护。</li>
+</ul>
+<h4 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h4><ul>
+<li>创建类和子程序通常都是一个迭代的过程。在创建子程序的过程中获得的认识常常会反过来影响类的设计。</li>
+<li>伪代码常常用来描述该做什么，而不是要怎么去做。</li>
+<li>伪代码编程过程是一个行之有效的做详细设计的工具，它同时让编码工作更容易。伪代码会直接转化为注释，从而确保了注释的准确性和实用性。</li>
+<li>不要停留在你所想到的第一个设计方案上。反复使用伪代码做出多种方案，然后选出其中最佳的一种方案再开始编码。</li>
+<li>每一步完成后都要检查你的工作成果，还要鼓励其他人帮你检查。这样你就会在投入精力最少的时候，用最低的成本发现错误。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/01/05/code2/" itemprop="url">
-                  代码大全2要点摘要（二）
+                  《代码大全2》要点摘要（二）
                 </a>
               
             
@@ -310,7 +511,7 @@
 
           
           
-             <span id="/2015/01/05/code2/" class="leancloud_visitors" data-flag-title="代码大全2要点摘要（二）">
+             <span id="/2015/01/05/code2/" class="leancloud_visitors" data-flag-title="《代码大全2》要点摘要（二）">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -561,7 +762,7 @@
               
                 
                 <a class="post-title-link" href="/2015/01/02/code1/" itemprop="url">
-                  代码大全2要点摘要（一）
+                  《代码大全2》要点摘要（一）
                 </a>
               
             
@@ -615,7 +816,7 @@
 
           
           
-             <span id="/2015/01/02/code1/" class="leancloud_visitors" data-flag-title="代码大全2要点摘要（一）">
+             <span id="/2015/01/02/code1/" class="leancloud_visitors" data-flag-title="《代码大全2》要点摘要（一）">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1034,7 +1235,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

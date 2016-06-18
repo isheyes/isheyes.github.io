@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-17T04:27:10.000Z</updated>
+  <updated>2016-06-18T03:29:36.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -16,11 +16,106 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>代码大全2要点摘要（二）</title>
+    <title>《代码大全2》要点摘要（三）</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/08/code3/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/08/code3/</id>
+    <published>2015-01-08T14:55:34.000Z</published>
+    <updated>2016-06-18T03:29:36.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;第七章、高质量的子程序&quot;&gt;&lt;a href=&quot;#第七章、高质量的子程序&quot; class=&quot;headerlink&quot; title=&quot;第七章、高质量的子程序&quot;&gt;&lt;/a&gt;第七章、高质量的子程序&lt;/h3&gt;&lt;h4 id=&quot;7-1、什么是子程序？&quot;&gt;&lt;a href=&quot;#7-1、什么是子程序？&quot; class=&quot;headerlink&quot; title=&quot;7.1、什么是子程序？&quot;&gt;&lt;/a&gt;7.1、什么是子程序？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;子程序就是为实现一个特定的目的而编写的一个可被调用的方法（method）或过程（procedure）。就是我们开发中常说的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;总结：创建子程序的理由&quot;&gt;&lt;a href=&quot;#总结：创建子程序的理由&quot; class=&quot;headerlink&quot; title=&quot;总结：创建子程序的理由&quot;&gt;&lt;/a&gt;总结：创建子程序的理由&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;降低复杂度&lt;/li&gt;
+&lt;li&gt;引入中间的、易懂的抽象&lt;/li&gt;
+&lt;li&gt;避免代码重复&lt;/li&gt;
+&lt;li&gt;支持子类化&lt;/li&gt;
+&lt;li&gt;隐藏顺序&lt;/li&gt;
+&lt;li&gt;隐藏指针操作&lt;/li&gt;
+&lt;li&gt;提高可移植性&lt;/li&gt;
+&lt;li&gt;简化复杂的逻辑判断&lt;/li&gt;
+&lt;li&gt;改善性能&lt;br&gt;除此之外，创建类的很多理由也是创建子程序的理由&lt;/li&gt;
+&lt;li&gt;隔离复杂度&lt;/li&gt;
+&lt;li&gt;隐藏实现细节&lt;/li&gt;
+&lt;li&gt;限制变化所带来的影响&lt;/li&gt;
+&lt;li&gt;隐藏全局数据&lt;/li&gt;
+&lt;li&gt;形成中央控制点&lt;/li&gt;
+&lt;li&gt;促成可重用的代码&lt;/li&gt;
+&lt;li&gt;达到特定的重构目的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;7-2、在子程序层上设计&quot;&gt;&lt;a href=&quot;#7-2、在子程序层上设计&quot; class=&quot;headerlink&quot; title=&quot;7.2、在子程序层上设计&quot;&gt;&lt;/a&gt;7.2、在子程序层上设计&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;对子程序而言，内聚性是指子程序中各种操作之间联系的紧密程度。有些程序员更喜欢使用“强度（strength）”这一术语：一个子程序中各种操作之间的联系有多强？像Cosine（）（余弦函数）这样的函数是极端内聚的，因为整个程序只完成一项功能。而CosineAndTan（）（余弦和正切）这个函数的内聚性相对较弱，因为它完成了多于一项的操作。我们的目标是让每一个子程序只把一件事做好，不再做任何其他事情。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;7-3、好的子程序（方法）的名字&quot;&gt;&lt;a href=&quot;#7-3、好的子程序（方法）的名字&quot; class=&quot;headerlink&quot; title=&quot;7.3、好的子程序（方法）的名字&quot;&gt;&lt;/a&gt;7.3、好的子程序（方法）的名字&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;描述子程序所做的所有事情，如一个方法的作用是计算报表总额并打开输出一个文件，如果把它命名为ComputeReportTotals（）就不算完整。但如果要命名为ComputeReportTotalsAndOpenOutputFile（）是很完整，但这样又感觉太长且有点傻。这里主要是因为这个子程序功能不够单一，产生了一些副作用，我们要做的就是换种编程方式，直截了当地解决问题而不产生副作用。&lt;/li&gt;
+&lt;li&gt;避免使用无意义的、模糊或表达不清的动词，比如HandleOutput（）改为FormatAndPrintOutput（），就很容易看清这个子程序的功能了。&lt;/li&gt;
+&lt;li&gt;不要仅通过数字来形成不同的子程序名字&lt;/li&gt;
+&lt;li&gt;根据需要确定子程序名字的长度，研究表明，变量名的最佳长度是9到15个字符。子程序（方法）名字通常是跟在对象名字之后，这实际上为其免费提供了一部分名字。总的来说，给方法命名的中点是尽可能含义清晰，也就是说，子程序名的长短要视该名字是否清晰易懂而定。&lt;/li&gt;
+&lt;li&gt;给函数命名时要对返回值有所描述。&lt;/li&gt;
+&lt;li&gt;给过程起名时使用语气强烈的动词加宾语的形式。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;准确使用对仗词,常见对仗词组有：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;add/remove&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;begin/end&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;create/destroy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;first/last&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;get/put&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;get/set&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;increment/decrement&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;insert/delete&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lock/unlock&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;min/max&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;next/previous&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;old/new&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;open/close&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;show/hide&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;source/target&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;start/stop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;up/down&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为常用操作确立命名规则&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;7-4、子程序可以写多长？&quot;&gt;&lt;a href=&quot;#7-4、子程序可以写多长？&quot; class=&quot;headerlink&quot; title=&quot;7.4、子程序可以写多长？&quot;&gt;&lt;/a&gt;7.4、子程序可以写多长？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;与其对子程序的长度强加限制，还不如让下面这些因素——如子程序的内聚性、嵌套的层次、变量的数量、决策点的数量、解释子程序用意所需的注释数量以及其他一些跟复杂度相关的考虑事项等——来决定子程序的长度。也就是，如果要编写一段超过200行代码的子程序，那么就要小心了。对于超过200行代码的子程序来说，没有哪项研究发现它能降低成本和/或降低出错率，而且超过200行后，你迟早会在可读性方面遇到问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;7-5、如何使用子程序参数&quot;&gt;&lt;a href=&quot;#7-5、如何使用子程序参数&quot; class=&quot;headerlink&quot; title=&quot;7.5、如何使用子程序参数&quot;&gt;&lt;/a&gt;7.5、如何使用子程序参数&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;如果几个子程序都使用了类似的一些参数，应该让这些参数的排列顺序保持一致。&lt;/li&gt;
+&lt;li&gt;使用所有的参数。&lt;/li&gt;
+&lt;li&gt;把状态或出错变量放在最后&lt;/li&gt;
+&lt;li&gt;不要把子程序的参数用作工作变量&lt;/li&gt;
+&lt;li&gt;在接口中对参数的假定加以说明&lt;/li&gt;
+&lt;li&gt;把子程序的参数个数限制在大约7个以内。对于人的理解力来说，7是一个神奇的数字。心理学研究发现，通常人类很难同时记住超过7个单位的信息。这一发现已经用于各个领域之中，因此，假定人不能同时记住超过约7个的子程序参数，也是合适的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;本章要点：&quot;&gt;&lt;a href=&quot;#本章要点：&quot; class=&quot;headerlink&quot; title=&quot;本章要点：&quot;&gt;&lt;/a&gt;本章要点：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;创建子程序最主要的目的是提高程序的可管理性，当然也有其他一些好的理由。其中，节省代码空间只是一个次要原因；提高可读性、可靠性和可修改性原因都更重要一些。&lt;/li&gt;
+&lt;li&gt;有时候把一些简单的操作写成独立的子程序也非常有价值。&lt;/li&gt;
+&lt;li&gt;子程序可以按照内聚性分为很多类，而你应该让大多数子程序具有功能上的内聚性，这是最佳的一种内聚性。&lt;/li&gt;
+&lt;li&gt;子程序的名字是它的质量的指示器。如果名字糟糕但恰如其分，那就说明这个子程序设计的很差劲。如果名字糟糕且又不准确，那么它就反应不出程序是干什么的。不管怎样，糟糕 名字都意味着程序需要修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;第八章、防御式编程&quot;&gt;&lt;a href=&quot;#第八章、防御式编程&quot; class=&quot;headerlink&quot; title=&quot;第八章、防御式编程&quot;&gt;&lt;/a&gt;第八章、防御式编程&lt;/h3&gt;&lt;h4 id=&quot;8-1什么是防御式编程？&quot;&gt;&lt;a href=&quot;#8-1什么是防御式编程？&quot; class=&quot;headerlink&quot; title=&quot;8.1什么是防御式编程？&quot;&gt;&lt;/a&gt;8.1什么是防御式编程？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;防御式编程并不是说让你编程时持“防备批评或攻击”的态度——“它就是这么工作”！这一概念来自防御式驾驶。在防御式驾驶中要建立这样一种思维，那就是你永远也不能确定另一位司机将要做什么。这样 才能确保在其他人做出危险动作时你也不会受到伤害。你要承担起保护自己的责任，哪怕是其他司机犯的错误。防御式编程的主要思想是：子程序应该不因传入错误数据而破坏，哪怕是其他子程序产生的错误数据。更一般的说，其核心想法是要承认程序都会有问题，都需要被修改，聪明的程序员应该根据这一点来编程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;第九章、伪代码编程过程&quot;&gt;&lt;a href=&quot;#第九章、伪代码编程过程&quot; class=&quot;headerlink&quot; title=&quot;第九章、伪代码编程过程&quot;&gt;&lt;/a&gt;第九章、伪代码编程过程&lt;/h3&gt;&lt;h4 id=&quot;9-1伪代码编程有什么好处？&quot;&gt;&lt;a href=&quot;#9-1伪代码编程有什么好处？&quot; class=&quot;headerlink&quot; title=&quot;9.1伪代码编程有什么好处？&quot;&gt;&lt;/a&gt;9.1伪代码编程有什么好处？&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;伪代码使得评审更容易。&lt;/li&gt;
+&lt;li&gt;伪代码支持反复迭代精化得思想。从一个高层设计开始，把这一设计精化为伪代码，然后再把伪代码精化为源代码。这样持续不断的小步精化，使你可以在把它推向更低的细节层次的同时，不断检查已形成的设计。这样做的结果，是你可能在最高的层次上发现最高层次的错误。在中间的层次上发现中间层次的错误，而在最低的层次上发现最低层次的错误——避免其中的任何错误变成真正的问题或者危害到更细节层次的工作。&lt;/li&gt;
+&lt;li&gt;伪代码使变更更加容易。&lt;/li&gt;
+&lt;li&gt;伪代码能使给代码作注释的工作量减到最少。&lt;/li&gt;
+&lt;li&gt;伪代码比其他形式的设计文档更容易维护。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;本章要点&quot;&gt;&lt;a href=&quot;#本章要点&quot; class=&quot;headerlink&quot; title=&quot;本章要点&quot;&gt;&lt;/a&gt;本章要点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;创建类和子程序通常都是一个迭代的过程。在创建子程序的过程中获得的认识常常会反过来影响类的设计。&lt;/li&gt;
+&lt;li&gt;伪代码常常用来描述该做什么，而不是要怎么去做。&lt;/li&gt;
+&lt;li&gt;伪代码编程过程是一个行之有效的做详细设计的工具，它同时让编码工作更容易。伪代码会直接转化为注释，从而确保了注释的准确性和实用性。&lt;/li&gt;
+&lt;li&gt;不要停留在你所想到的第一个设计方案上。反复使用伪代码做出多种方案，然后选出其中最佳的一种方案再开始编码。&lt;/li&gt;
+&lt;li&gt;每一步完成后都要检查你的工作成果，还要鼓励其他人帮你检查。这样你就会在投入精力最少的时候，用最低的成本发现错误。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第七章、高质量的子程序&quot;&gt;&lt;a href=&quot;#第七章、高质量的子程序&quot; class=&quot;headerlink&quot; title=&quot;第七章、高质量的子程序&quot;&gt;&lt;/a&gt;第七章、高质量的子程序&lt;/h3&gt;&lt;h4 id=&quot;7-1、什么是子程序？&quot;&gt;&lt;a href=&quot;#7-1、什么
+    
+    </summary>
+    
+      <category term="读书" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="代码大全2" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《代码大全2》要点摘要（二）</title>
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/05/code2/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/05/code2/</id>
     <published>2015-01-05T04:09:19.000Z</published>
-    <updated>2016-06-17T04:27:10.000Z</updated>
+    <updated>2016-06-18T03:29:37.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;a href=&quot;#第四章、关键的“构建”决策&quot; class=&quot;headerlink&quot; title=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;/a&gt;第四章、关键的“构建”决策&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;每种编程语言都有其优点和缺点。要知道你使用语言的明确优点和缺点。&lt;/li&gt;
@@ -216,11 +311,11 @@
   </entry>
   
   <entry>
-    <title>代码大全2要点摘要（一）</title>
+    <title>《代码大全2》要点摘要（一）</title>
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/</id>
     <published>2015-01-02T01:56:09.000Z</published>
-    <updated>2016-06-15T17:36:52.000Z</updated>
+    <updated>2016-06-18T03:29:43.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;a href=&quot;#构建活动中的具体任务（task）&quot; class=&quot;headerlink&quot; title=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;/a&gt;构建活动中的具体任务（task）&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。&lt;/li&gt;
