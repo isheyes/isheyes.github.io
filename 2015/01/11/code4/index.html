@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="感悟," />
+  <meta name="keywords" content="代码大全2," />
 
 
 
@@ -86,19 +86,43 @@
 
 
 
-<meta name="description" content="每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，也许你最初的梦想是这样的不过现实往往是这个样子滴当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能">
+<meta name="description" content="第十章、使用变量的一般事项10.1、变量初始化原则
+在声明变量的时候初始化
+在靠近变量第一次使用的位置初始化它
+理想情况下，在靠近第一次使用变量的位置声明和定义该变量
+在类的构造函数里初始化该类的数据成员
+检查是否需要重新初始化
+
+本章要点
+数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误
+最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/index.html">
+<meta property="og:title" content="《代码大全2》要点摘要（四）">
+<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/index.html">
 <meta property="og:site_name" content="Zxy's Note">
-<meta property="og:description" content="每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，也许你最初的梦想是这样的不过现实往往是这个样子滴当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/plan1.png">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/plan2.png">
-<meta property="og:updated_time" content="2016-06-15T08:18:24.000Z">
+<meta property="og:description" content="第十章、使用变量的一般事项10.1、变量初始化原则
+在声明变量的时候初始化
+在靠近变量第一次使用的位置初始化它
+理想情况下，在靠近第一次使用变量的位置声明和定义该变量
+在类的构造函数里初始化该类的数据成员
+检查是否需要重新初始化
+
+本章要点
+数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误
+最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。">
+<meta property="og:updated_time" content="2016-06-18T18:23:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，也许你最初的梦想是这样的不过现实往往是这个样子滴当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能">
-<meta name="twitter:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/plan1.png">
+<meta name="twitter:title" content="《代码大全2》要点摘要（四）">
+<meta name="twitter:description" content="第十章、使用变量的一般事项10.1、变量初始化原则
+在声明变量的时候初始化
+在靠近变量第一次使用的位置初始化它
+理想情况下，在靠近第一次使用变量的位置声明和定义该变量
+在类的构造函数里初始化该类的数据成员
+检查是否需要重新初始化
+
+本章要点
+数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误
+最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。">
 
 
 
@@ -116,7 +140,7 @@
   };
 </script>
 
-  <title> Hello World | Zxy's Note </title>
+  <title> 《代码大全2》要点摘要（四） | Zxy's Note </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +280,7 @@
             
             
               
-                Hello World
+                《代码大全2》要点摘要（四）
               
             
           </h1>
@@ -268,8 +292,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-23T12:39:04+08:00" content="2014-12-23">
-              2014-12-23
+            <time itemprop="dateCreated" datetime="2015-01-11T00:59:56+08:00" content="2015-01-11">
+              2015-01-11
             </time>
           </span>
 
@@ -282,8 +306,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/读书/" itemprop="url" rel="index">
+                    <span itemprop="name">读书</span>
                   </a>
                 </span>
 
@@ -298,8 +322,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/12/23/helloworld/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/23/helloworld/" itemprop="commentsCount"></span>
+                <a href="/2015/01/11/code4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/11/code4/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -309,7 +333,7 @@
 
           
           
-             <span id="/2014/12/23/helloworld/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2015/01/11/code4/" class="leancloud_visitors" data-flag-title="《代码大全2》要点摘要（四）">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -331,7 +355,112 @@
       
 
       
-        <p>每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，<br>也许你最初的梦想是这样的<img src="/images/plan1.png" alt="plan1.png"><br>不过现实往往是这个样子滴<img src="/images/plan2.png" alt="plan2.png"><br>当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能以一种“Hello World”的心态来面对现实的世界，这也算是一种境界吧！</p>
+        <h3 id="第十章、使用变量的一般事项"><a href="#第十章、使用变量的一般事项" class="headerlink" title="第十章、使用变量的一般事项"></a>第十章、使用变量的一般事项</h3><h4 id="10-1、变量初始化原则"><a href="#10-1、变量初始化原则" class="headerlink" title="10.1、变量初始化原则"></a>10.1、变量初始化原则</h4><ul>
+<li>在声明变量的时候初始化</li>
+<li>在靠近变量第一次使用的位置初始化它</li>
+<li>理想情况下，在靠近第一次使用变量的位置声明和定义该变量</li>
+<li>在类的构造函数里初始化该类的数据成员</li>
+<li>检查是否需要重新初始化</li>
+</ul>
+<h4 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h4><ul>
+<li>数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误</li>
+<li>最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。避免使用全局数据。</li>
+<li>使用相同变量的语句尽可能集中在一起</li>
+<li>把每个变量用于唯一的用途</li>
+</ul>
+<hr>
+<h3 id="第十一章、变量名的力量"><a href="#第十一章、变量名的力量" class="headerlink" title="第十一章、变量名的力量"></a>第十一章、变量名的力量</h3><h4 id="11-1、选择好变量名的注意事项"><a href="#11-1、选择好变量名的注意事项" class="headerlink" title="11.1、选择好变量名的注意事项"></a>11.1、选择好变量名的注意事项</h4><ul>
+<li>变量的好与坏在很大程度取决于它的名字的好坏，所以在给变量命名的时候要格外小心谨慎</li>
+<li>一个好的变量名是可读的、易记得和恰如其分的</li>
+</ul>
+<p><strong>最重要的命名注意事项</strong></p>
+<ul>
+<li>为变量命名时最重要的考虑事项是，该名字要完全、准确地描述出该变量所代表的事物。获得好名字的一种使用技巧就是用文字表达变量所代表的是什么？通常，对变量的描述就是最佳的变量名。这种名字很容易阅读，因为其中并不包含晦涩的缩写，同时也没有歧义。因为它是对该事物的完整描述，因为不会和其它事物混淆。另外，由于这一名字与所表达的概念相似，因此很容易记忆。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量用途</th>
+<th style="text-align:center">好名字  好描述</th>
+<th>坏名字   差描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>到期的支票累额</td>
+<td style="text-align:center">runningTotal,checkTotal</td>
+<td>written,ct,x,x1,x2</td>
+</tr>
+<tr>
+<td>高速列车的运行速度</td>
+<td style="text-align:center">volocity,trainVelocity</td>
+<td>velt,v.tv,x,x1,x2,train</td>
+</tr>
+<tr>
+<td>当前日期</td>
+<td style="text-align:center">currentDate,todayDate</td>
+<td>cd,current,c,x,x1,x2,date</td>
+</tr>
+<tr>
+<td>每页的行数</td>
+<td style="text-align:center">linePerPage</td>
+<td>lpp,lines,l,x,x1,x2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>currentDate和todayDate都是很好的名字，因为他们都完全而且准确的描述出了“当前日期”这一概念。事实上，这两个名字都用了非常直白的词。程序员们有时候会忽视这些普通词语，而他们往往是最明确的。cd和c是很糟糕的命名，因为他们太短，同时又不具有描述性。current也很糟，因为它并没有告诉你是当前设么。date看上去不错，但经过最后推敲它也只是个坏名字，因为这里所说的日期并不是所有的日期均可，而只是特指当前日期；而date本身并未表达出这层含义。x、x1和x2永远是坏名字——传统上用x代表一个未知量；如果不希望你的变量所代表的是一个未知量，那么请考虑一个更好的名字吧。</p>
+</blockquote>
+<p><strong>最适当的名字长度</strong></p>
+<ul>
+<li>变量名的平均长度应该在8到16个为宜，这个也不是绝对的，它强调的是，如果你看自己写的代码时发现了很多更短的名字，那么你需要认证检查，确保这些名字的含义足够清晰。</li>
+</ul>
+<p>变量名太长、太短和刚好合适的实例</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">太长</th>
+<th style="text-align:center">numberOfPerpleOnTheUsOlympicTeam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">太短</td>
+<td style="text-align:center">n,np,ntm;</td>
+</tr>
+<tr>
+<td style="text-align:center">正好</td>
+<td style="text-align:center">numTeamMembers</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>变量名中的计算值限定词，类似于：Total,Sum,Average,Max,Mix,Record,String,Pointer等，在命名变量时，请把限定词加在名字的最后，举例如reverueTotal(总收入)、expenseTotal（总支出）、revenueAverage（平均收入）、expenseAverage（平均支出）这组名字的变量具有非常优雅的对称性。而从totalRevenue、expenseTotal、revenueAverage、averageExpense这组名字中则看不出什么规律来。总之，一致性可以提高可读性，简化维护工作。</li>
+<li>当然把计算的量放在名字最后的这条规则也有例外，那就是Num限定词的位置已经是约定成俗的。Num放在变量名的开始位置代表一个总数：numCustomers表示的是员工的总数。Num放在变量名的结束位置代表一个下标：customerNum表示当前员工的序号。然而由于这样使用Num常常会带来麻烦，因此可能更好的办法是避开这些问题，用Count或者Total来代表员工的总数，用Index来指代某个特定的员工。这样，customerCount就代表员工的总数，customerIndex代表某个特定的员工。</li>
+<li>变量名中常用对仗词</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">begin/end</span><br><span class="line">first/last</span><br><span class="line">locked/unlocked</span><br><span class="line">min/max</span><br><span class="line">next/previous</span><br><span class="line">old/new</span><br><span class="line">opened/closed</span><br><span class="line">visible/invisible</span><br><span class="line">source/destination</span><br><span class="line">up/down</span><br></pre></td></tr></table></figure>
+<h4 id="11-2、为布尔变量命名"><a href="#11-2、为布尔变量命名" class="headerlink" title="11.2、为布尔变量命名"></a>11.2、为布尔变量命名</h4><p>应该遵循的几条原则</p>
+<ul>
+<li>done 用done表示某件事情已经完成。这一变量可用于表示循环结束或者一些其他的操作已完成。在事情完成之前把done设为false，在事情完成之后把它设为true</li>
+<li>error 用error表示有错误发生。在错误发生之前把变量值设为false，在错误已经发生时把它设为true</li>
+<li>found  用found来表明某个值已经找到了。在还没有找到该值的时候把found设为false，一旦找到该值就把found设为true。在一个数组中查找某个值，在文件中搜寻某员工的ID，在一沓支票中寻找某张特定金额的支票等等的时候，都可用用found。</li>
+<li>success或ok  用success或ok来表明一项操作是否成功。在操作失败的时候把该变量设为false，在操作成功的时候把其设为true。如果可以请用一个更具体的名字来代替success，以便更具体的描述成功的含义。如果完成处理就表示这个程序执行成功，那么或许你应该用proccessingComplete来取而代之。如果找到某个值就是程序执行成功，那么也许应该换用found。</li>
+<li>给布尔变量赋予隐含“真/假”含义的名字，像done、success这样的名字都隐含有这样的含义，要么是true要么是false；某件事完成了或者没完成，成功了或者失败了只有两种情况，不会有第三种情况。而像status和sourceFile这样的名字却是很糟糕的布尔变量名，他们没有明确的true货false。应该把status替换为类似于error或者statusOK这样的名字，同时把sourceFile替换为sourceFileAvailable、sourceFileFound，或者其他能体现该变量所代表含义的名字。</li>
+<li>有些程序员喜欢在他们写的布尔变量名前加Is，这样变量名就变成了一个问题：isdone?isError?isFound?isProcessingComplete?用true或false回答问题也就为该变量给出了取值。这种方法的优点之一是它不能用于模糊不清的名字：isStatus？这毫无意义。它的缺点之一是降低了简单逻辑表达式的可读性：if（isFound）的可读性略差于if（found）</li>
+</ul>
+<h4 id="11-3、为什么要有命名规则？"><a href="#11-3、为什么要有命名规则？" class="headerlink" title="11.3、为什么要有命名规则？"></a>11.3、为什么要有命名规则？</h4><ul>
+<li>要求你更多的按照规矩行事</li>
+<li>有助于在项目之间传递知识，减少沟通成本</li>
+<li>有助于你在新项目中更快速的学习代码</li>
+<li>有助于减少名字增生</li>
+<li>弥补编程语言的不足之处</li>
+<li>强调相关变量之间的关系</li>
+<li>关键之处在于，采用任何一项规则都要好于没有规则。规则可能是武断的。命名规则的威力并非来源于你所采取的某个特定规则，而是来源于以下事实：规则的存在为你的代码增加了结构，减少了你需要考虑的事情。</li>
+<li>代码阅读的次数远远多于编写的次数。确保你所取得名字更侧重于阅读方便而不是编写方便。</li>
+<li>好的变量名是提高程序可读性的一项关键要素。</li>
+<li>最后总结一句话：你一定会因使用了某种命名规则而受益。</li>
+</ul>
 
       
     </div>
@@ -353,7 +482,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/感悟/" rel="tag">#感悟</a>
+            <a href="/tags/代码大全2/" rel="tag">#代码大全2</a>
           
         </div>
       
@@ -362,13 +491,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/01/08/code3/" rel="next" title="《代码大全2》要点摘要（三）">
+                <i class="fa fa-chevron-left"></i> 《代码大全2》要点摘要（三）
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/12/29/dbs/" rel="prev" title="苹果开发者账号邓白氏码申请注意事项">
-                苹果开发者账号邓白氏码申请注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -394,8 +523,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/12/23/helloworld/"
-           data-title="Hello World" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/">
+      <div class="ds-thread" data-thread-key="2015/01/11/code4/"
+           data-title="《代码大全2》要点摘要（四）" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/">
       </div>
     
   </div>
@@ -549,7 +678,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第十章、使用变量的一般事项"><span class="nav-number">1.</span> <span class="nav-text">第十章、使用变量的一般事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10-1、变量初始化原则"><span class="nav-number">1.1.</span> <span class="nav-text">10.1、变量初始化原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本章要点"><span class="nav-number">1.2.</span> <span class="nav-text">本章要点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十一章、变量名的力量"><span class="nav-number">2.</span> <span class="nav-text">第十一章、变量名的力量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-1、选择好变量名的注意事项"><span class="nav-number">2.1.</span> <span class="nav-text">11.1、选择好变量名的注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-2、为布尔变量命名"><span class="nav-number">2.2.</span> <span class="nav-text">11.2、为布尔变量命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-3、为什么要有命名规则？"><span class="nav-number">2.3.</span> <span class="nav-text">11.3、为什么要有命名规则？</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

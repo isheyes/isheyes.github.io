@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-18T03:29:36.000Z</updated>
+  <updated>2016-06-18T18:23:19.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -14,6 +14,134 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《代码大全2》要点摘要（四）</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/</id>
+    <published>2015-01-10T16:59:56.000Z</published>
+    <updated>2016-06-18T18:23:19.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;a href=&quot;#第十章、使用变量的一般事项&quot; class=&quot;headerlink&quot; title=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;/a&gt;第十章、使用变量的一般事项&lt;/h3&gt;&lt;h4 id=&quot;10-1、变量初始化原则&quot;&gt;&lt;a href=&quot;#10-1、变量初始化原则&quot; class=&quot;headerlink&quot; title=&quot;10.1、变量初始化原则&quot;&gt;&lt;/a&gt;10.1、变量初始化原则&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在声明变量的时候初始化&lt;/li&gt;
+&lt;li&gt;在靠近变量第一次使用的位置初始化它&lt;/li&gt;
+&lt;li&gt;理想情况下，在靠近第一次使用变量的位置声明和定义该变量&lt;/li&gt;
+&lt;li&gt;在类的构造函数里初始化该类的数据成员&lt;/li&gt;
+&lt;li&gt;检查是否需要重新初始化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;本章要点&quot;&gt;&lt;a href=&quot;#本章要点&quot; class=&quot;headerlink&quot; title=&quot;本章要点&quot;&gt;&lt;/a&gt;本章要点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误&lt;/li&gt;
+&lt;li&gt;最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。避免使用全局数据。&lt;/li&gt;
+&lt;li&gt;使用相同变量的语句尽可能集中在一起&lt;/li&gt;
+&lt;li&gt;把每个变量用于唯一的用途&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;第十一章、变量名的力量&quot;&gt;&lt;a href=&quot;#第十一章、变量名的力量&quot; class=&quot;headerlink&quot; title=&quot;第十一章、变量名的力量&quot;&gt;&lt;/a&gt;第十一章、变量名的力量&lt;/h3&gt;&lt;h4 id=&quot;11-1、选择好变量名的注意事项&quot;&gt;&lt;a href=&quot;#11-1、选择好变量名的注意事项&quot; class=&quot;headerlink&quot; title=&quot;11.1、选择好变量名的注意事项&quot;&gt;&lt;/a&gt;11.1、选择好变量名的注意事项&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;变量的好与坏在很大程度取决于它的名字的好坏，所以在给变量命名的时候要格外小心谨慎&lt;/li&gt;
+&lt;li&gt;一个好的变量名是可读的、易记得和恰如其分的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;最重要的命名注意事项&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为变量命名时最重要的考虑事项是，该名字要完全、准确地描述出该变量所代表的事物。获得好名字的一种使用技巧就是用文字表达变量所代表的是什么？通常，对变量的描述就是最佳的变量名。这种名字很容易阅读，因为其中并不包含晦涩的缩写，同时也没有歧义。因为它是对该事物的完整描述，因为不会和其它事物混淆。另外，由于这一名字与所表达的概念相似，因此很容易记忆。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;变量用途&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;好名字  好描述&lt;/th&gt;
+&lt;th&gt;坏名字   差描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;到期的支票累额&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;runningTotal,checkTotal&lt;/td&gt;
+&lt;td&gt;written,ct,x,x1,x2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;高速列车的运行速度&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;volocity,trainVelocity&lt;/td&gt;
+&lt;td&gt;velt,v.tv,x,x1,x2,train&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;当前日期&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;currentDate,todayDate&lt;/td&gt;
+&lt;td&gt;cd,current,c,x,x1,x2,date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;每页的行数&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;linePerPage&lt;/td&gt;
+&lt;td&gt;lpp,lines,l,x,x1,x2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;currentDate和todayDate都是很好的名字，因为他们都完全而且准确的描述出了“当前日期”这一概念。事实上，这两个名字都用了非常直白的词。程序员们有时候会忽视这些普通词语，而他们往往是最明确的。cd和c是很糟糕的命名，因为他们太短，同时又不具有描述性。current也很糟，因为它并没有告诉你是当前设么。date看上去不错，但经过最后推敲它也只是个坏名字，因为这里所说的日期并不是所有的日期均可，而只是特指当前日期；而date本身并未表达出这层含义。x、x1和x2永远是坏名字——传统上用x代表一个未知量；如果不希望你的变量所代表的是一个未知量，那么请考虑一个更好的名字吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;最适当的名字长度&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量名的平均长度应该在8到16个为宜，这个也不是绝对的，它强调的是，如果你看自己写的代码时发现了很多更短的名字，那么你需要认证检查，确保这些名字的含义足够清晰。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;变量名太长、太短和刚好合适的实例&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;太长&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;numberOfPerpleOnTheUsOlympicTeam&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;太短&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;n,np,ntm;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;正好&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;numTeamMembers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;变量名中的计算值限定词，类似于：Total,Sum,Average,Max,Mix,Record,String,Pointer等，在命名变量时，请把限定词加在名字的最后，举例如reverueTotal(总收入)、expenseTotal（总支出）、revenueAverage（平均收入）、expenseAverage（平均支出）这组名字的变量具有非常优雅的对称性。而从totalRevenue、expenseTotal、revenueAverage、averageExpense这组名字中则看不出什么规律来。总之，一致性可以提高可读性，简化维护工作。&lt;/li&gt;
+&lt;li&gt;当然把计算的量放在名字最后的这条规则也有例外，那就是Num限定词的位置已经是约定成俗的。Num放在变量名的开始位置代表一个总数：numCustomers表示的是员工的总数。Num放在变量名的结束位置代表一个下标：customerNum表示当前员工的序号。然而由于这样使用Num常常会带来麻烦，因此可能更好的办法是避开这些问题，用Count或者Total来代表员工的总数，用Index来指代某个特定的员工。这样，customerCount就代表员工的总数，customerIndex代表某个特定的员工。&lt;/li&gt;
+&lt;li&gt;变量名中常用对仗词&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;begin/end&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;first/last&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;locked/unlocked&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;min/max&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;next/previous&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;old/new&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;opened/closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;visible/invisible&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;source/destination&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;up/down&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;11-2、为布尔变量命名&quot;&gt;&lt;a href=&quot;#11-2、为布尔变量命名&quot; class=&quot;headerlink&quot; title=&quot;11.2、为布尔变量命名&quot;&gt;&lt;/a&gt;11.2、为布尔变量命名&lt;/h4&gt;&lt;p&gt;应该遵循的几条原则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;done 用done表示某件事情已经完成。这一变量可用于表示循环结束或者一些其他的操作已完成。在事情完成之前把done设为false，在事情完成之后把它设为true&lt;/li&gt;
+&lt;li&gt;error 用error表示有错误发生。在错误发生之前把变量值设为false，在错误已经发生时把它设为true&lt;/li&gt;
+&lt;li&gt;found  用found来表明某个值已经找到了。在还没有找到该值的时候把found设为false，一旦找到该值就把found设为true。在一个数组中查找某个值，在文件中搜寻某员工的ID，在一沓支票中寻找某张特定金额的支票等等的时候，都可用用found。&lt;/li&gt;
+&lt;li&gt;success或ok  用success或ok来表明一项操作是否成功。在操作失败的时候把该变量设为false，在操作成功的时候把其设为true。如果可以请用一个更具体的名字来代替success，以便更具体的描述成功的含义。如果完成处理就表示这个程序执行成功，那么或许你应该用proccessingComplete来取而代之。如果找到某个值就是程序执行成功，那么也许应该换用found。&lt;/li&gt;
+&lt;li&gt;给布尔变量赋予隐含“真/假”含义的名字，像done、success这样的名字都隐含有这样的含义，要么是true要么是false；某件事完成了或者没完成，成功了或者失败了只有两种情况，不会有第三种情况。而像status和sourceFile这样的名字却是很糟糕的布尔变量名，他们没有明确的true货false。应该把status替换为类似于error或者statusOK这样的名字，同时把sourceFile替换为sourceFileAvailable、sourceFileFound，或者其他能体现该变量所代表含义的名字。&lt;/li&gt;
+&lt;li&gt;有些程序员喜欢在他们写的布尔变量名前加Is，这样变量名就变成了一个问题：isdone?isError?isFound?isProcessingComplete?用true或false回答问题也就为该变量给出了取值。这种方法的优点之一是它不能用于模糊不清的名字：isStatus？这毫无意义。它的缺点之一是降低了简单逻辑表达式的可读性：if（isFound）的可读性略差于if（found）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;11-3、为什么要有命名规则？&quot;&gt;&lt;a href=&quot;#11-3、为什么要有命名规则？&quot; class=&quot;headerlink&quot; title=&quot;11.3、为什么要有命名规则？&quot;&gt;&lt;/a&gt;11.3、为什么要有命名规则？&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;要求你更多的按照规矩行事&lt;/li&gt;
+&lt;li&gt;有助于在项目之间传递知识，减少沟通成本&lt;/li&gt;
+&lt;li&gt;有助于你在新项目中更快速的学习代码&lt;/li&gt;
+&lt;li&gt;有助于减少名字增生&lt;/li&gt;
+&lt;li&gt;弥补编程语言的不足之处&lt;/li&gt;
+&lt;li&gt;强调相关变量之间的关系&lt;/li&gt;
+&lt;li&gt;关键之处在于，采用任何一项规则都要好于没有规则。规则可能是武断的。命名规则的威力并非来源于你所采取的某个特定规则，而是来源于以下事实：规则的存在为你的代码增加了结构，减少了你需要考虑的事情。&lt;/li&gt;
+&lt;li&gt;代码阅读的次数远远多于编写的次数。确保你所取得名字更侧重于阅读方便而不是编写方便。&lt;/li&gt;
+&lt;li&gt;好的变量名是提高程序可读性的一项关键要素。&lt;/li&gt;
+&lt;li&gt;最后总结一句话：你一定会因使用了某种命名规则而受益。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;a href=&quot;#第十章、使用变量的一般事项&quot; class=&quot;headerlink&quot; title=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;/a&gt;第十章、使用变量的一般事项&lt;/h3&gt;&lt;h4 id=&quot;10-1、变量初始化原则&quot;&gt;&lt;a href
+    
+    </summary>
+    
+      <category term="读书" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="代码大全2" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82/"/>
+    
+  </entry>
   
   <entry>
     <title>《代码大全2》要点摘要（三）</title>
