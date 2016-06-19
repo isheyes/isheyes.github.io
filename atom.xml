@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-18T18:23:19.000Z</updated>
+  <updated>2016-06-19T16:22:38.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swift 3.0（一）</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/20/swift1/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/20/swift1/</id>
+    <published>2016-06-20T04:21:56.000Z</published>
+    <updated>2016-06-19T16:22:38.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;1-1、常量&quot;&gt;&lt;a href=&quot;#1-1、常量&quot; class=&quot;headerlink&quot; title=&quot;1.1、常量&quot;&gt;&lt;/a&gt;1.1、常量&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let num = 100 //苹果提倡的swift编程风格是语句末尾不加分号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//num = 200 常量一经赋值无法再次赋值，无法改变&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;1-2、变量&quot;&gt;&lt;a href=&quot;#1-2、变量&quot; class=&quot;headerlink&quot; title=&quot;1.2、变量&quot;&gt;&lt;/a&gt;1.2、变量&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;用关键字 &lt;strong&gt;var&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var index = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;index = 3  //变量值可以修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var a = 1 , b = 2 , c = 3  //可以一次声明多个常量或变量&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;注意，swift是一种强类型语言，拥有type inference（类型推断机制），即使没有显式声明变量类型，系统也会自动推断。查看方式：按住键盘option键，光标放在变量名上会变成一个问号，点击查看即可看到变量或常量的具体类型&lt;/li&gt;
+&lt;li&gt;当然也可以显式声明常量或变量&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var myWebsite: String = &amp;quot;http://isheyes.com&amp;quot;  //显式的声明变量类型&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var x , y , z: Double //一次为多个变量显式声明类型&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-1、常量&quot;&gt;&lt;a href=&quot;#1-1、常量&quot; class=&quot;headerlink&quot; title=&quot;1.1、常量&quot;&gt;&lt;/a&gt;1.1、常量&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;figure class=&quot;highli
+    
+    </summary>
+    
+      <category term="swift" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/swift/"/>
+    
+    
+      <category term="swift 3.0" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/swift-3-0/"/>
+    
+  </entry>
   
   <entry>
     <title>《代码大全2》要点摘要（四）</title>
