@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-19T16:22:38.000Z</updated>
+  <updated>2016-06-20T03:18:59.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -16,16 +16,103 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>swift 3.0（一）</title>
+    <title>swift 3.0（二）：整型</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/</id>
+    <published>2016-06-21T03:08:09.000Z</published>
+    <updated>2016-06-20T03:18:59.000Z</updated>
+    
+    <content type="html">&lt;h4 id=&quot;2-1、整型&quot;&gt;&lt;a href=&quot;#2-1、整型&quot; class=&quot;headerlink&quot; title=&quot;2.1、整型&quot;&gt;&lt;/a&gt;2.1、整型&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var imInt: Int = 17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int.max // 最大值9223372036854775807&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int.min //最小值-9223372036854775808&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var imUInt: UInt = 80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt.max  //18446744073709551615&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int8.max  //127&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int8.min  //-128&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt8.max //255&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt8.min //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 溢出在Swift语言中是一种编译错误,意思就是说如果超出该类型取值范围不会等到运行阶段在编译阶段就会报错&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//let a: Int8 = 255&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- more --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int16.max //32767&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int16.min //-32768&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt16.max  //65535&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt16.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int 32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int32.max   //2147483647&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int32.min   //-2147483648&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt32.max  //4294967295&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt32.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int64.max   //9223372036854775807&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int64.min   //-9223372036854775808&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt64.max  //18446744073709551615&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt64.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 使用0b,0o,0x&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let decimalInt: Int = 17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let binaryInt: Int  = 0b10001&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let octalInt: Int   = 0o21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let hexInt:Int      = 0x11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 使用_标示数字位，国外人喜欢三位一组，当然按照我们的习惯肯定是四位数字一组&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let x = 1_000_000 //老外习惯&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let y = 100_0000  //我们的习惯，程序的阅读次数要远远高于编码次数，所以在允许的前提下要不遗余力的提高代码的可读性。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用表格罗列一下应该更清晰明了，如下图：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;最大值(max)&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;最小值(min)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Int&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;9223372036854775807&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-9223372036854775808&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UInt&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;18446744073709551615&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Int8&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;127&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-128&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UInt8&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;255&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Int16&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;32767&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-32768&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UInt16&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;65535&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Int32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;2147483647&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-2147483648&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UInt32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;4294967295&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Int64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;9223372036854775807&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-9223372036854775808&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UInt64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;18446744073709551615&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;2-1、整型&quot;&gt;&lt;a href=&quot;#2-1、整型&quot; class=&quot;headerlink&quot; title=&quot;2.1、整型&quot;&gt;&lt;/a&gt;2.1、整型&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+    
+    </summary>
+    
+      <category term="swift" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/swift/"/>
+    
+    
+      <category term="swift 3.0" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/swift-3-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift 3.0（一）：常量和变量</title>
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/20/swift1/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/20/swift1/</id>
     <published>2016-06-20T04:21:56.000Z</published>
-    <updated>2016-06-19T16:22:38.000Z</updated>
+    <updated>2016-06-20T03:19:03.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;1-1、常量&quot;&gt;&lt;a href=&quot;#1-1、常量&quot; class=&quot;headerlink&quot; title=&quot;1.1、常量&quot;&gt;&lt;/a&gt;1.1、常量&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let num = 100 //苹果提倡的swift编程风格是语句末尾不加分号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//num = 200 常量一经赋值无法再次赋值，无法改变&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;苹果在新开发语言中将常量单独拿出来是鼓励我们把那些不会变化的量声明成常量，这样可以提高性能。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let num = 100 //苹果提倡的swift编程风格是语句末尾不加分号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//num = 200 常量一经赋值无法再次赋值，无法改变&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;1-2、变量&quot;&gt;&lt;a href=&quot;#1-2、变量&quot; class=&quot;headerlink&quot; title=&quot;1.2、变量&quot;&gt;&lt;/a&gt;1.2、变量&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;用关键字 &lt;strong&gt;var&lt;/strong&gt;&lt;/p&gt;
@@ -42,7 +129,10 @@
     <summary type="html">
     
       &lt;h3 id=&quot;1-1、常量&quot;&gt;&lt;a href=&quot;#1-1、常量&quot; class=&quot;headerlink&quot; title=&quot;1.1、常量&quot;&gt;&lt;/a&gt;1.1、常量&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;figure class=&quot;highli
+&lt;li&gt;用关键字  &lt;strong&gt;let&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;苹果在新开发语言中将常量单独拿出来是鼓励我们把那些不会变化的量声明成常量，这样可以提高性能。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let num = 100 //苹果提倡的swift编程风格是语句末尾不加分号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//num = 200 常量一经赋值无法再次赋值，无法改变&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -58,7 +148,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/11/code4/</id>
     <published>2015-01-10T16:59:56.000Z</published>
-    <updated>2016-06-18T18:23:19.000Z</updated>
+    <updated>2016-06-20T03:20:17.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;a href=&quot;#第十章、使用变量的一般事项&quot; class=&quot;headerlink&quot; title=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;/a&gt;第十章、使用变量的一般事项&lt;/h3&gt;&lt;h4 id=&quot;10-1、变量初始化原则&quot;&gt;&lt;a href=&quot;#10-1、变量初始化原则&quot; class=&quot;headerlink&quot; title=&quot;10.1、变量初始化原则&quot;&gt;&lt;/a&gt;10.1、变量初始化原则&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;在声明变量的时候初始化&lt;/li&gt;
@@ -67,6 +157,7 @@
 &lt;li&gt;在类的构造函数里初始化该类的数据成员&lt;/li&gt;
 &lt;li&gt;检查是否需要重新初始化&lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h4 id=&quot;本章要点&quot;&gt;&lt;a href=&quot;#本章要点&quot; class=&quot;headerlink&quot; title=&quot;本章要点&quot;&gt;&lt;/a&gt;本章要点&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;数据初始化过程很容易出错，所以请遵循上面提到的一些原则来避免造成错误&lt;/li&gt;
 &lt;li&gt;最小化每个变量的作用域。把同一变量的引用点集中在一起。把变量限定在子程序或类的范围之内。避免使用全局数据。&lt;/li&gt;
@@ -170,7 +261,13 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;a href=&quot;#第十章、使用变量的一般事项&quot; class=&quot;headerlink&quot; title=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;/a&gt;第十章、使用变量的一般事项&lt;/h3&gt;&lt;h4 id=&quot;10-1、变量初始化原则&quot;&gt;&lt;a href
+      &lt;h3 id=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;a href=&quot;#第十章、使用变量的一般事项&quot; class=&quot;headerlink&quot; title=&quot;第十章、使用变量的一般事项&quot;&gt;&lt;/a&gt;第十章、使用变量的一般事项&lt;/h3&gt;&lt;h4 id=&quot;10-1、变量初始化原则&quot;&gt;&lt;a href=&quot;#10-1、变量初始化原则&quot; class=&quot;headerlink&quot; title=&quot;10.1、变量初始化原则&quot;&gt;&lt;/a&gt;10.1、变量初始化原则&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在声明变量的时候初始化&lt;/li&gt;
+&lt;li&gt;在靠近变量第一次使用的位置初始化它&lt;/li&gt;
+&lt;li&gt;理想情况下，在靠近第一次使用变量的位置声明和定义该变量&lt;/li&gt;
+&lt;li&gt;在类的构造函数里初始化该类的数据成员&lt;/li&gt;
+&lt;li&gt;检查是否需要重新初始化&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -186,7 +283,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/08/code3/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/08/code3/</id>
     <published>2015-01-08T14:55:34.000Z</published>
-    <updated>2016-06-18T03:29:36.000Z</updated>
+    <updated>2016-06-20T03:20:16.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;第七章、高质量的子程序&quot;&gt;&lt;a href=&quot;#第七章、高质量的子程序&quot; class=&quot;headerlink&quot; title=&quot;第七章、高质量的子程序&quot;&gt;&lt;/a&gt;第七章、高质量的子程序&lt;/h3&gt;&lt;h4 id=&quot;7-1、什么是子程序？&quot;&gt;&lt;a href=&quot;#7-1、什么是子程序？&quot; class=&quot;headerlink&quot; title=&quot;7.1、什么是子程序？&quot;&gt;&lt;/a&gt;7.1、什么是子程序？&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;子程序就是为实现一个特定的目的而编写的一个可被调用的方法（method）或过程（procedure）。就是我们开发中常说的方法。&lt;/p&gt;
@@ -209,6 +306,7 @@
 &lt;li&gt;促成可重用的代码&lt;/li&gt;
 &lt;li&gt;达到特定的重构目的&lt;/li&gt;
 &lt;/ul&gt;
+  &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h4 id=&quot;7-2、在子程序层上设计&quot;&gt;&lt;a href=&quot;#7-2、在子程序层上设计&quot; class=&quot;headerlink&quot; title=&quot;7.2、在子程序层上设计&quot;&gt;&lt;/a&gt;7.2、在子程序层上设计&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;对子程序而言，内聚性是指子程序中各种操作之间联系的紧密程度。有些程序员更喜欢使用“强度（strength）”这一术语：一个子程序中各种操作之间的联系有多强？像Cosine（）（余弦函数）这样的函数是极端内聚的，因为整个程序只完成一项功能。而CosineAndTan（）（余弦和正切）这个函数的内聚性相对较弱，因为它完成了多于一项的操作。我们的目标是让每一个子程序只把一件事做好，不再做任何其他事情。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -265,7 +363,27 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;第七章、高质量的子程序&quot;&gt;&lt;a href=&quot;#第七章、高质量的子程序&quot; class=&quot;headerlink&quot; title=&quot;第七章、高质量的子程序&quot;&gt;&lt;/a&gt;第七章、高质量的子程序&lt;/h3&gt;&lt;h4 id=&quot;7-1、什么是子程序？&quot;&gt;&lt;a href=&quot;#7-1、什么
+      &lt;h3 id=&quot;第七章、高质量的子程序&quot;&gt;&lt;a href=&quot;#第七章、高质量的子程序&quot; class=&quot;headerlink&quot; title=&quot;第七章、高质量的子程序&quot;&gt;&lt;/a&gt;第七章、高质量的子程序&lt;/h3&gt;&lt;h4 id=&quot;7-1、什么是子程序？&quot;&gt;&lt;a href=&quot;#7-1、什么是子程序？&quot; class=&quot;headerlink&quot; title=&quot;7.1、什么是子程序？&quot;&gt;&lt;/a&gt;7.1、什么是子程序？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;子程序就是为实现一个特定的目的而编写的一个可被调用的方法（method）或过程（procedure）。就是我们开发中常说的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;总结：创建子程序的理由&quot;&gt;&lt;a href=&quot;#总结：创建子程序的理由&quot; class=&quot;headerlink&quot; title=&quot;总结：创建子程序的理由&quot;&gt;&lt;/a&gt;总结：创建子程序的理由&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;降低复杂度&lt;/li&gt;
+&lt;li&gt;引入中间的、易懂的抽象&lt;/li&gt;
+&lt;li&gt;避免代码重复&lt;/li&gt;
+&lt;li&gt;支持子类化&lt;/li&gt;
+&lt;li&gt;隐藏顺序&lt;/li&gt;
+&lt;li&gt;隐藏指针操作&lt;/li&gt;
+&lt;li&gt;提高可移植性&lt;/li&gt;
+&lt;li&gt;简化复杂的逻辑判断&lt;/li&gt;
+&lt;li&gt;改善性能&lt;br&gt;除此之外，创建类的很多理由也是创建子程序的理由&lt;/li&gt;
+&lt;li&gt;隔离复杂度&lt;/li&gt;
+&lt;li&gt;隐藏实现细节&lt;/li&gt;
+&lt;li&gt;限制变化所带来的影响&lt;/li&gt;
+&lt;li&gt;隐藏全局数据&lt;/li&gt;
+&lt;li&gt;形成中央控制点&lt;/li&gt;
+&lt;li&gt;促成可重用的代码&lt;/li&gt;
+&lt;li&gt;达到特定的重构目的&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -281,7 +399,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/05/code2/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/05/code2/</id>
     <published>2015-01-05T04:09:19.000Z</published>
-    <updated>2016-06-18T03:29:37.000Z</updated>
+    <updated>2016-06-20T03:20:15.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;a href=&quot;#第四章、关键的“构建”决策&quot; class=&quot;headerlink&quot; title=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;/a&gt;第四章、关键的“构建”决策&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;每种编程语言都有其优点和缺点。要知道你使用语言的明确优点和缺点。&lt;/li&gt;
@@ -292,7 +410,8 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;第五章、软件构建中的设计&quot;&gt;&lt;a href=&quot;#第五章、软件构建中的设计&quot; class=&quot;headerlink&quot; title=&quot;第五章、软件构建中的设计&quot;&gt;&lt;/a&gt;第五章、软件构建中的设计&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;设计范畴内的特征&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;设计范畴内的特征&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;最小复杂度（Minimal complexity）&lt;/li&gt;
 &lt;li&gt;易于维护（Ease of maintenance）&lt;/li&gt;
 &lt;li&gt;松散耦合（loose coupling）（抵耦合）&lt;/li&gt;
@@ -303,12 +422,12 @@
 &lt;li&gt;可移植性（portability）&lt;/li&gt;
 &lt;li&gt;精简性（leanness）&lt;/li&gt;
 &lt;li&gt;层次性（stratification）&lt;/li&gt;
-&lt;li&gt;标准技术（Standard techniques）&lt;/li&gt;
+&lt;li&gt;标准技术（Standard techniques）&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;一个程序中的设计层次&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;一个程序中的设计层次&lt;ul&gt;
 &lt;li&gt;1.系统&lt;/li&gt;
 &lt;li&gt;2.首先被组织为子系统&lt;/li&gt;
 &lt;li&gt;3.子系统被进一步分解为类&lt;/li&gt;
@@ -465,7 +584,27 @@
     <summary type="html">
     
       &lt;h3 id=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;a href=&quot;#第四章、关键的“构建”决策&quot; class=&quot;headerlink&quot; title=&quot;第四章、关键的“构建”决策&quot;&gt;&lt;/a&gt;第四章、关键的“构建”决策&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;每种编程语言都有其优点和缺点。要知道你使
+&lt;li&gt;每种编程语言都有其优点和缺点。要知道你使用语言的明确优点和缺点。&lt;/li&gt;
+&lt;li&gt;在开始编程之前，做好一些约定（convention）。“改变代码使之符合这些约定”是近乎不可能的。&lt;/li&gt;
+&lt;li&gt;“构建的实践方法”的种类比任何单个项目能用到的要多。有意识地选择最适合你的项目的实践方法。&lt;/li&gt;
+&lt;li&gt;问问你自己，你采用的编程实践是对你所用的编程语言的正确响应，还是受它的控制？要记得“深入一种语言去编程”，不要仅“在一种语言上编程”。&lt;/li&gt;
+&lt;li&gt;你在技术浪潮中的位置决定了哪种方法是有效的——甚至是可能用到的。确定你在技术浪潮中的位置，并相应调整计划和预期目标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;第五章、软件构建中的设计&quot;&gt;&lt;a href=&quot;#第五章、软件构建中的设计&quot; class=&quot;headerlink&quot; title=&quot;第五章、软件构建中的设计&quot;&gt;&lt;/a&gt;第五章、软件构建中的设计&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设计范畴内的特征&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最小复杂度（Minimal complexity）&lt;/li&gt;
+&lt;li&gt;易于维护（Ease of maintenance）&lt;/li&gt;
+&lt;li&gt;松散耦合（loose coupling）（抵耦合）&lt;/li&gt;
+&lt;li&gt;可扩展性（extensibility）&lt;/li&gt;
+&lt;li&gt;可重用性（reusability）&lt;/li&gt;
+&lt;li&gt;高扇入（high fan-in）：多使用底层工具类（utility class）&lt;/li&gt;
+&lt;li&gt;低扇出（low fan-out）：一个类里尽量少使用其他类，超过7个可以认为高扇出&lt;/li&gt;
+&lt;li&gt;可移植性（portability）&lt;/li&gt;
+&lt;li&gt;精简性（leanness）&lt;/li&gt;
+&lt;li&gt;层次性（stratification）&lt;/li&gt;
+&lt;li&gt;标准技术（Standard techniques）
     
     </summary>
     
@@ -481,7 +620,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/</id>
     <published>2015-01-02T01:56:09.000Z</published>
-    <updated>2016-06-18T03:29:43.000Z</updated>
+    <updated>2016-06-20T03:20:12.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;a href=&quot;#构建活动中的具体任务（task）&quot; class=&quot;headerlink&quot; title=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;/a&gt;构建活动中的具体任务（task）&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。&lt;/li&gt;
@@ -504,6 +643,7 @@
 &lt;li&gt;&lt;strong&gt;最后，你对“如何进行构建”的理解程度，决定了你这名程序员的优秀程度&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;第二章、-隐喻的力量&quot;&gt;&lt;a href=&quot;#第二章、-隐喻的力量&quot; class=&quot;headerlink&quot; title=&quot;第二章、 隐喻的力量&quot;&gt;&lt;/a&gt;第二章、 隐喻的力量&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;隐喻可以理解成类比（analogy），使用隐喻的方法叫做“建模”（modeling）。&lt;/li&gt;
 &lt;li&gt;你对隐喻有多理解，也就决定了你对软件开发有多理解。&lt;/li&gt;
@@ -533,7 +673,26 @@
     <summary type="html">
     
       &lt;h3 id=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;a href=&quot;#构建活动中的具体任务（task）&quot; class=&quot;headerlink&quot; title=&quot;构建活动中的具体任务（task）&quot;&gt;&lt;/a&gt;构建活动中的具体任务（task）&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;验证有关的基础工
+&lt;li&gt;验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。&lt;/li&gt;
+&lt;li&gt;确定如何测试所写的代码。&lt;/li&gt;
+&lt;li&gt;设计并编写类（class）和子程序（routine）。&lt;/li&gt;
+&lt;li&gt;创建并命名变量（variable）和具名常量（named constant）。&lt;/li&gt;
+&lt;li&gt;选择控制结构（control structure），组织语句块。&lt;/li&gt;
+&lt;li&gt;对你的代码进行单元测试和集成测试，并排除其中的错误。&lt;/li&gt;
+&lt;li&gt;评审开发团队其他成员的底层设计和代码，并让他们评审你的工作。&lt;/li&gt;
+&lt;li&gt;润饰代码，仔细进行代码的格式化和注释。&lt;/li&gt;
+&lt;li&gt;将单独开发的多个软件组件集成为一体。&lt;/li&gt;
+&lt;li&gt;调整代码（tuning code），让它更快、更省资源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;第一章、要点&quot;&gt;&lt;a href=&quot;#第一章、要点&quot; class=&quot;headerlink&quot; title=&quot;第一章、要点&quot;&gt;&lt;/a&gt;第一章、要点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;软件构建是软件开发的核心活动；构建活动是每个项目中唯一一件必不可少的工作。&lt;/li&gt;
+&lt;li&gt;软件构建的主要活动包括：详细设计、编码、调试、集成、开发者测试（developer testing）(包括单元测试和集成测试)。&lt;/li&gt;
+&lt;li&gt;构建也常被称作“编码”和“编程”。&lt;/li&gt;
+&lt;li&gt;构建活动的质量对软件的质量有着实质性的影响。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最后，你对“如何进行构建”的理解程度，决定了你这名程序员的优秀程度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
     
     </summary>
     
@@ -549,7 +708,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/29/dbs/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/29/dbs/</id>
     <published>2014-12-29T02:56:09.000Z</published>
-    <updated>2016-06-15T09:55:01.000Z</updated>
+    <updated>2016-06-20T03:20:19.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;苹果开发者账号分为三种&quot;&gt;&lt;a href=&quot;#苹果开发者账号分为三种&quot; class=&quot;headerlink&quot; title=&quot;苹果开发者账号分为三种&quot;&gt;&lt;/a&gt;苹果开发者账号分为三种&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;299美元的企业账号&lt;br&gt;99美元的个人账号&lt;br&gt;以公司名义申请的99美元账号&lt;/p&gt;
@@ -557,7 +716,7 @@
 &lt;ul&gt;
 &lt;li&gt;如果我们是个人开发者，只要申请99美元的开发者账号即可；&lt;/li&gt;
 &lt;li&gt;如果是企业内部使用，开发的应用只在企业内部分发使用，不用上传到App Store(此种账号也无法提交应用到app store)，需要申请299美元的企业账号，这个一直都需要邓白氏码的；&lt;/li&gt;
-&lt;li&gt;如果你是给公司或者跟客户开发的应用，这个应用肯定又是要提交至App Store的，那最好是要以公司的名义来申请99美元的开发者账号；这种开发者账号在以前和个人名义申请的一样也不需要邓白氏码，不过现在苹果要求只要以公司名义申请的开发者账号一律都要提供邓白氏编码，如果你是初次给公司申请这个编码有可能会遇到各种各样的坑，不过不用怕，跟着我总结的成功申请N&amp;gt;5家以上公司的邓白氏码的经验，相信会帮你少走很多弯路；&lt;/li&gt;
+&lt;li&gt;如果你是给公司或者跟客户开发的应用，这个应用肯定又是要提交至App Store的，那最好是要以公司的名义来申请99美元的开发者账号；这种开发者账号在以前和个人名义申请的一样也不需要邓白氏码，不过现在苹果要求只要以公司名义申请的开发者账号一律都要提供邓白氏编码，如果你是初次给公司申请这个编码有可能会遇到各种各样的坑，不过不用怕，跟着我总结的成功申请N&amp;gt;5家以上公司的邓白氏码的经验，相信会帮你少走很多弯路；&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;闲言少叙，废话不多说，直接上图！图所传达的信息量大也够直观&lt;/p&gt;
@@ -580,7 +739,12 @@
     <summary type="html">
     
       &lt;h3 id=&quot;苹果开发者账号分为三种&quot;&gt;&lt;a href=&quot;#苹果开发者账号分为三种&quot; class=&quot;headerlink&quot; title=&quot;苹果开发者账号分为三种&quot;&gt;&lt;/a&gt;苹果开发者账号分为三种&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;299美元的企业账号&lt;br&gt;99美元的个人
+&lt;p&gt;299美元的企业账号&lt;br&gt;99美元的个人账号&lt;br&gt;以公司名义申请的99美元账号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我们是个人开发者，只要申请99美元的开发者账号即可；&lt;/li&gt;
+&lt;li&gt;如果是企业内部使用，开发的应用只在企业内部分发使用，不用上传到App Store(此种账号也无法提交应用到app store)，需要申请299美元的企业账号，这个一直都需要邓白氏码的；&lt;/li&gt;
+&lt;li&gt;如果你是给公司或者跟客户开发的应用，这个应用肯定又是要提交至App Store的，那最好是要以公司的名义来申请99美元的开发者账号；这种开发者账号在以前和个人名义申请的一样也不需要邓白氏码，不过现在苹果要求只要以公司名义申请的开发者账号一律都要提供邓白氏编码，如果你是初次给公司申请这个编码有可能会遇到各种各样的坑，不过不用怕，跟着我总结的成功申请N&amp;gt;5家以上公司的邓白氏码的经验，相信会帮你少走很多弯路；
     
     </summary>
     
@@ -598,14 +762,14 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/</id>
     <published>2014-12-23T04:39:04.000Z</published>
-    <updated>2016-06-15T08:18:24.000Z</updated>
+    <updated>2016-06-20T03:20:20.000Z</updated>
     
-    <content type="html">&lt;p&gt;每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，&lt;br&gt;也许你最初的梦想是这样的&lt;img src=&quot;/images/plan1.png&quot; alt=&quot;plan1.png&quot;&gt;&lt;br&gt;不过现实往往是这个样子滴&lt;img src=&quot;/images/plan2.png&quot; alt=&quot;plan2.png&quot;&gt;&lt;br&gt;当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能以一种“Hello World”的心态来面对现实的世界，这也算是一种境界吧！&lt;/p&gt;
+    <content type="html">&lt;p&gt;每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;也许你最初的梦想是这样的&lt;img src=&quot;/images/plan1.png&quot; alt=&quot;plan1.png&quot;&gt;&lt;br&gt;不过现实往往是这个样子滴&lt;img src=&quot;/images/plan2.png&quot; alt=&quot;plan2.png&quot;&gt;&lt;br&gt;当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能以一种“Hello World”的心态来面对现实的世界，这也算是一种境界吧！&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，&lt;br&gt;也许你最初的梦想是这样的&lt;img src=&quot;/images/plan1.png
+      &lt;p&gt;每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，
     
     </summary>
     
