@@ -88,13 +88,13 @@
 
 <meta name="description" content="2.1、整型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// Intvar imInt: Int = 17Int.max // 最大值9223372036854775807Int.min //最小值-9223372036854">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift 3.0（二）：整型">
+<meta property="og:title" content="swift 3.0（二）：整型、浮点型">
 <meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/index.html">
 <meta property="og:site_name" content="Zxy's Note">
 <meta property="og:description" content="2.1、整型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// Intvar imInt: Int = 17Int.max // 最大值9223372036854775807Int.min //最小值-9223372036854">
-<meta property="og:updated_time" content="2016-06-20T03:18:59.000Z">
+<meta property="og:updated_time" content="2016-06-20T07:15:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift 3.0（二）：整型">
+<meta name="twitter:title" content="swift 3.0（二）：整型、浮点型">
 <meta name="twitter:description" content="2.1、整型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// Intvar imInt: Int = 17Int.max // 最大值9223372036854775807Int.min //最小值-9223372036854">
 
 
@@ -113,7 +113,7 @@
   };
 </script>
 
-  <title> swift 3.0（二）：整型 | Zxy's Note </title>
+  <title> swift 3.0（二）：整型、浮点型 | Zxy's Note </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +253,7 @@
             
             
               
-                swift 3.0（二）：整型
+                swift 3.0（二）：整型、浮点型
               
             
           </h1>
@@ -306,7 +306,7 @@
 
           
           
-             <span id="/2016/06/21/swift2/" class="leancloud_visitors" data-flag-title="swift 3.0（二）：整型">
+             <span id="/2016/06/21/swift2/" class="leancloud_visitors" data-flag-title="swift 3.0（二）：整型、浮点型">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -391,6 +391,15 @@
 </tr>
 </tbody>
 </table>
+<h4 id="2-2、单精度、双精度"><a href="#2-2、单精度、双精度" class="headerlink" title="2.2、单精度、双精度"></a>2.2、单精度、双精度</h4><blockquote>
+<p>Float、Double</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var imFloat: Float = 3.1415926      //3.141593</span><br><span class="line">var imDouble: Double = 3.1415926    //3.1415926</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最后强调一点，苹果为了避免隐式类型转换（也叫自动类型转换）导致的安全隐患，在swift中只能通过强制类型转换实现不同数据类型之间的计算，比如Int类型和Double类型计算，系统不会将Int类型自动转换成Double类型，也不会将Double类型自动转换成Int类型，必须通过强制类型转换将两者转换成一致的数据类型才能计算</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let y: Int = 100</span><br><span class="line">let z: Double = 200.0</span><br><span class="line"></span><br><span class="line">//y + z  直接相加编译阶段会报错</span><br><span class="line">Double(y) + z //将Int类型强制转换成Double之后不会有问题了</span><br></pre></td></tr></table></figure>
+<p>我们通过CGFloat的定义可以看出CGFloat不是Float类型就是Double类型，这样32位64位都适用，同时CG是CoreGraphics的缩写，苹果为了参数命名统一美观，不管是Float还是Double都用CGFloat来表示吧，大概就是这样吧。</p>
 
       
     </div>
@@ -429,6 +438,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/06/22/swiftlog/" rel="prev" title="swift项目开发中如何自定义log">
+                swift项目开发中如何自定义log <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -454,7 +467,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/06/21/swift2/"
-           data-title="swift 3.0（二）：整型" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/">
+           data-title="swift 3.0（二）：整型、浮点型" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/">
       </div>
     
   </div>
@@ -499,7 +512,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -516,7 +529,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -608,7 +621,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、整型"><span class="nav-number">1.</span> <span class="nav-text">2.1、整型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、整型"><span class="nav-number">1.</span> <span class="nav-text">2.1、整型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、单精度、双精度"><span class="nav-number">2.</span> <span class="nav-text">2.2、单精度、双精度</span></a></li></ol></div>
             
           </div>
         </section>

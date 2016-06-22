@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-20T03:18:59.000Z</updated>
+  <updated>2016-06-22T07:40:55.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -16,11 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>swift 3.0（二）：整型</title>
+    <title>swift项目开发中如何自定义log</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/</id>
+    <published>2016-06-22T07:33:09.000Z</published>
+    <updated>2016-06-22T07:40:55.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;使用系统函数打印log的弊端&quot;&gt;&lt;a href=&quot;#使用系统函数打印log的弊端&quot; class=&quot;headerlink&quot; title=&quot;使用系统函数打印log的弊端&quot;&gt;&lt;/a&gt;使用系统函数打印log的弊端&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;非常消耗性能&lt;/li&gt;
+&lt;li&gt;如果app部署到AppStore之后用户是看不到log内容的&lt;/li&gt;
+&lt;li&gt;所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#if DEBUG&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#define MyLog(id, ...) NSLog((@\&amp;quot;%s [Line %d] \&amp;quot; id),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#define MyLog(id, ...)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#endif&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;但在swift中没有宏的概念了，我们要怎样实现上述需求呢？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;swift中实现自定义打印log的方法：&quot;&gt;&lt;a href=&quot;#swift中实现自定义打印log的方法：&quot; class=&quot;headerlink&quot; title=&quot;swift中实现自定义打印log的方法：&quot;&gt;&lt;/a&gt;swift中实现自定义打印log的方法：&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;func XYLog&amp;lt;T&amp;gt;(message: T, fileName: String = #file, methodName: String = #function, lineNum: Int = #line)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    #if DEBUG&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(&amp;quot;\(methodName)[\(lineNum)]:\(message)&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    #endif&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;注意：&quot;&gt;&lt;a href=&quot;#注意：&quot; class=&quot;headerlink&quot; title=&quot;注意：&quot;&gt;&lt;/a&gt;注意：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在3.0之前，文件路径用__FILE__,方法名用__FUNCTION__,行号用__LINE__&lt;/li&gt;
+&lt;li&gt;3.0往后，文件路径用#file,方法名#function,行号用#line，更方便更贴切&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;方法写好之后还要再设置DEBUG标记才能实现调试时显示，发布时隐藏，如图：&lt;br&gt;&lt;img src=&quot;/images/DebugFlag.png&quot; alt=&quot;DebugFlag.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;设置好之后我们在这里切换Debug和Release模式下分别运行就可以测试，&lt;br&gt;&lt;img src=&quot;/images/switchModel.png&quot; alt=&quot;DebugFlag.png&quot;&gt;&lt;br&gt;Debug调试模式下能够输出打印log，Release模式下则不会输出&lt;/p&gt;
+&lt;p&gt;我在第18行调用了上面方法，分别在两种模式下运行结果如图：&lt;br&gt;debug&lt;br&gt;&lt;img src=&quot;/images/debug.png&quot; alt=&quot;debug.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Release&lt;br&gt;&lt;img src=&quot;/images/release.png&quot; alt=&quot;release.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;使用系统函数打印log的弊端&quot;&gt;&lt;a href=&quot;#使用系统函数打印log的弊端&quot; class=&quot;headerlink&quot; title=&quot;使用系统函数打印log的弊端&quot;&gt;&lt;/a&gt;使用系统函数打印log的弊端&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;非常消耗性能&lt;/li&gt;
+&lt;li&gt;如果app部署到AppStore之后用户是看不到log内容的&lt;/li&gt;
+&lt;li&gt;所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="swift" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/swift/"/>
+    
+    
+      <category term="swift" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/swift/"/>
+    
+      <category term="log" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/log/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift 3.0（二）：整型、浮点型</title>
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/21/swift2/</id>
     <published>2016-06-21T03:08:09.000Z</published>
-    <updated>2016-06-20T03:18:59.000Z</updated>
+    <updated>2016-06-20T07:15:17.000Z</updated>
     
     <content type="html">&lt;h4 id=&quot;2-1、整型&quot;&gt;&lt;a href=&quot;#2-1、整型&quot; class=&quot;headerlink&quot; title=&quot;2.1、整型&quot;&gt;&lt;/a&gt;2.1、整型&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var imInt: Int = 17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int.max // 最大值9223372036854775807&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int.min //最小值-9223372036854775808&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var imUInt: UInt = 80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt.max  //18446744073709551615&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int8.max  //127&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int8.min  //-128&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt8.max //255&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt8.min //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 溢出在Swift语言中是一种编译错误,意思就是说如果超出该类型取值范围不会等到运行阶段在编译阶段就会报错&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//let a: Int8 = 255&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- more --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int16.max //32767&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int16.min //-32768&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt16.max  //65535&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt16.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int 32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int32.max   //2147483647&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int32.min   //-2147483648&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt32.max  //4294967295&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt32.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Int64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int64.max   //9223372036854775807&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int64.min   //-9223372036854775808&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// UInt64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt64.max  //18446744073709551615&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UInt64.min  //0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 使用0b,0o,0x&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let decimalInt: Int = 17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let binaryInt: Int  = 0b10001&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let octalInt: Int   = 0o21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let hexInt:Int      = 0x11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 使用_标示数字位，国外人喜欢三位一组，当然按照我们的习惯肯定是四位数字一组&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let x = 1_000_000 //老外习惯&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let y = 100_0000  //我们的习惯，程序的阅读次数要远远高于编码次数，所以在允许的前提下要不遗余力的提高代码的可读性。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;用表格罗列一下应该更清晰明了，如下图：&lt;/p&gt;
@@ -85,6 +132,15 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h4 id=&quot;2-2、单精度、双精度&quot;&gt;&lt;a href=&quot;#2-2、单精度、双精度&quot; class=&quot;headerlink&quot; title=&quot;2.2、单精度、双精度&quot;&gt;&lt;/a&gt;2.2、单精度、双精度&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Float、Double&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var imFloat: Float = 3.1415926      //3.141593&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var imDouble: Double = 3.1415926    //3.1415926&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;最后强调一点，苹果为了避免隐式类型转换（也叫自动类型转换）导致的安全隐患，在swift中只能通过强制类型转换实现不同数据类型之间的计算，比如Int类型和Double类型计算，系统不会将Int类型自动转换成Double类型，也不会将Double类型自动转换成Int类型，必须通过强制类型转换将两者转换成一致的数据类型才能计算&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let y: Int = 100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;let z: Double = 200.0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//y + z  直接相加编译阶段会报错&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Double(y) + z //将Int类型强制转换成Double之后不会有问题了&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;我们通过CGFloat的定义可以看出CGFloat不是Float类型就是Double类型，这样32位64位都适用，同时CG是CoreGraphics的缩写，苹果为了参数命名统一美观，不管是Float还是Double都用CGFloat来表示吧，大概就是这样吧。&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -762,7 +818,7 @@
     <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/"/>
     <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/12/23/helloworld/</id>
     <published>2014-12-23T04:39:04.000Z</published>
-    <updated>2016-06-20T03:20:20.000Z</updated>
+    <updated>2016-06-22T07:35:20.000Z</updated>
     
     <content type="html">&lt;p&gt;每个程序员内心都有一个Hello World情节吧~当你能够驾驭电脑向这个世界发声的时候内心多少都会有点小激动吧！不过从此也走上了一条不归路，而且路上还有无数个坑在等着你！不管学什么语言，&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;也许你最初的梦想是这样的&lt;img src=&quot;/images/plan1.png&quot; alt=&quot;plan1.png&quot;&gt;&lt;br&gt;不过现实往往是这个样子滴&lt;img src=&quot;/images/plan2.png&quot; alt=&quot;plan2.png&quot;&gt;&lt;br&gt;当你跨过了一个个坑，翻过了一座座墙，完成了一堆蛋疼的需求，攻克了无数诡异的bug之后，你内心会变的越来越强大，直到有一天你从代码的世界走出来，来到真实的世界同样也能以一种“Hello World”的心态来面对现实的世界，这也算是一种境界吧！&lt;/p&gt;
 </content>

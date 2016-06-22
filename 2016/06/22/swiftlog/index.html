@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="代码大全2," />
+  <meta name="keywords" content="swift,log," />
 
 
 
@@ -86,37 +86,30 @@
 
 
 
-<meta name="description" content="构建活动中的具体任务（task）
-验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。
-确定如何测试所写的代码。
-设计并编写类（class）和子程序（routine）。
-创建并命名变量（variable）和具名常量（named constant）。
-选择控制结构（control structure），组织语句块。
-对你的代码进行单元测试和集成测试，并排除其中的错误。
-评审开发团队其他成员的">
+<meta name="description" content="使用系统函数打印log的弊端
+非常消耗性能
+如果app部署到AppStore之后用户是看不到log内容的
+所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《代码大全2》要点摘要（一）">
-<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/index.html">
+<meta property="og:title" content="swift项目开发中如何自定义log">
+<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/index.html">
 <meta property="og:site_name" content="Zxy's Note">
-<meta property="og:description" content="构建活动中的具体任务（task）
-验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。
-确定如何测试所写的代码。
-设计并编写类（class）和子程序（routine）。
-创建并命名变量（variable）和具名常量（named constant）。
-选择控制结构（control structure），组织语句块。
-对你的代码进行单元测试和集成测试，并排除其中的错误。
-评审开发团队其他成员的">
-<meta property="og:updated_time" content="2016-06-20T03:20:12.000Z">
+<meta property="og:description" content="使用系统函数打印log的弊端
+非常消耗性能
+如果app部署到AppStore之后用户是看不到log内容的
+所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
+<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/DebugFlag.png">
+<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/switchModel.png">
+<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/debug.png">
+<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/release.png">
+<meta property="og:updated_time" content="2016-06-22T07:40:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《代码大全2》要点摘要（一）">
-<meta name="twitter:description" content="构建活动中的具体任务（task）
-验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。
-确定如何测试所写的代码。
-设计并编写类（class）和子程序（routine）。
-创建并命名变量（variable）和具名常量（named constant）。
-选择控制结构（control structure），组织语句块。
-对你的代码进行单元测试和集成测试，并排除其中的错误。
-评审开发团队其他成员的">
+<meta name="twitter:title" content="swift项目开发中如何自定义log">
+<meta name="twitter:description" content="使用系统函数打印log的弊端
+非常消耗性能
+如果app部署到AppStore之后用户是看不到log内容的
+所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
+<meta name="twitter:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/DebugFlag.png">
 
 
 
@@ -134,7 +127,7 @@
   };
 </script>
 
-  <title> 《代码大全2》要点摘要（一） | Zxy's Note </title>
+  <title> swift项目开发中如何自定义log | Zxy's Note </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -274,7 +267,7 @@
             
             
               
-                《代码大全2》要点摘要（一）
+                swift项目开发中如何自定义log
               
             
           </h1>
@@ -286,8 +279,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-01-02T09:56:09+08:00" content="2015-01-02">
-              2015-01-02
+            <time itemprop="dateCreated" datetime="2016-06-22T15:33:09+08:00" content="2016-06-22">
+              2016-06-22
             </time>
           </span>
 
@@ -300,8 +293,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/读书/" itemprop="url" rel="index">
-                    <span itemprop="name">读书</span>
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
                   </a>
                 </span>
 
@@ -316,8 +309,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/01/02/code1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/02/code1/" itemprop="commentsCount"></span>
+                <a href="/2016/06/22/swiftlog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/swiftlog/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,7 +320,7 @@
 
           
           
-             <span id="/2015/01/02/code1/" class="leancloud_visitors" data-flag-title="《代码大全2》要点摘要（一）">
+             <span id="/2016/06/22/swiftlog/" class="leancloud_visitors" data-flag-title="swift项目开发中如何自定义log">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -349,52 +342,25 @@
       
 
       
-        <h3 id="构建活动中的具体任务（task）"><a href="#构建活动中的具体任务（task）" class="headerlink" title="构建活动中的具体任务（task）"></a>构建活动中的具体任务（task）</h3><ul>
-<li>验证有关的基础工作已经完成，因此构建活动可以顺利的进行下去。</li>
-<li>确定如何测试所写的代码。</li>
-<li>设计并编写类（class）和子程序（routine）。</li>
-<li>创建并命名变量（variable）和具名常量（named constant）。</li>
-<li>选择控制结构（control structure），组织语句块。</li>
-<li>对你的代码进行单元测试和集成测试，并排除其中的错误。</li>
-<li>评审开发团队其他成员的底层设计和代码，并让他们评审你的工作。</li>
-<li>润饰代码，仔细进行代码的格式化和注释。</li>
-<li>将单独开发的多个软件组件集成为一体。</li>
-<li>调整代码（tuning code），让它更快、更省资源。</li>
+        <h3 id="使用系统函数打印log的弊端"><a href="#使用系统函数打印log的弊端" class="headerlink" title="使用系统函数打印log的弊端"></a>使用系统函数打印log的弊端</h3><ul>
+<li>非常消耗性能</li>
+<li>如果app部署到AppStore之后用户是看不到log内容的</li>
+<li>所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现</li>
 </ul>
-<hr>
-<h3 id="第一章、要点"><a href="#第一章、要点" class="headerlink" title="第一章、要点"></a>第一章、要点</h3><ul>
-<li>软件构建是软件开发的核心活动；构建活动是每个项目中唯一一件必不可少的工作。</li>
-<li>软件构建的主要活动包括：详细设计、编码、调试、集成、开发者测试（developer testing）(包括单元测试和集成测试)。</li>
-<li>构建也常被称作“编码”和“编程”。</li>
-<li>构建活动的质量对软件的质量有着实质性的影响。</li>
-<li><strong>最后，你对“如何进行构建”的理解程度，决定了你这名程序员的优秀程度</strong></li>
-</ul>
-<hr>
 <a id="more"></a>
-<h3 id="第二章、-隐喻的力量"><a href="#第二章、-隐喻的力量" class="headerlink" title="第二章、 隐喻的力量"></a>第二章、 隐喻的力量</h3><ul>
-<li>隐喻可以理解成类比（analogy），使用隐喻的方法叫做“建模”（modeling）。</li>
-<li>你对隐喻有多理解，也就决定了你对软件开发有多理解。</li>
-<li>对于编程来说，最大的挑战是将问题概念化（conceptualizing）,编程中的许多错误都是概念性的错误。正因为每一个问题在概念上都是独特的，所以要找到一套能解决所有问题的一通百通的指导规则是很难的、甚至是不可能的。如此看来，能一般性的知道大致如何解决问题，至少也和知道如何解决特定问题一样有价值了。</li>
-<li>隐喻是启示而不是算法。因此他们往往有一点随意（sloopy）。</li>
-<li>隐喻把软件开发过程与其他你熟悉的活动联系在一起，帮助你更好的理解。</li>
-<li>有些隐喻比其他一些隐喻更贴切。</li>
-<li>通过把软件的构建过程比作是房屋的建设过程，我们可以发现，仔细的准备是必要的，而大型项目和小型项目之间也是有差异的。</li>
-<li>通过把软件开发中的实践比作是智慧工具箱的工具，我们又发现，每位程序员都有许多工具，但并不存在任何一个能适用于所有工作的工具，因地制宜选择正确工具是成为能有效编程的程序员的关键</li>
-<li>不同的隐喻彼此并不排斥，应当使用对你最有益处的某种的隐喻组合。</li>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#if DEBUG</span><br><span class="line">#define MyLog(id, ...) NSLog((@\&quot;%s [Line %d] \&quot; id),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);</span><br><span class="line">#else</span><br><span class="line">#define MyLog(id, ...)</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<ul>
+<li>但在swift中没有宏的概念了，我们要怎样实现上述需求呢？</li>
 </ul>
-<hr>
-<h3 id="第三章、三思而后行：前期准备"><a href="#第三章、三思而后行：前期准备" class="headerlink" title="第三章、三思而后行：前期准备"></a>第三章、三思而后行：前期准备</h3><ul>
-<li>虽然经济景气程度时高时低，但是优秀的程序员永远是紧缺的。人生苦短，当有大量更好的选择摆在你的面前的时候，在一个荒蛮的软件企业中工作是不明智的。</li>
-<li>发现错误的时间要尽可能接近引发该错误的时间，这样修复它所付出的代价才会降到最低。</li>
-<li>构建活动的准备工作的根本目标在于降低风险。要确认你的准备活动是在降低风险，而非增加风险。</li>
-<li>如果你想开发高质量的软件，软件开发过程中必须由始至终关注质量。在项目初期关注质量，对产品质量的正面影响比在项目末期关注质量的影响要大。</li>
-<li>程序员的一部分工作是教育老板和合作者，告诉他们软件开发过程中，包括在开始编程之前进行充分准备的重要性。</li>
-<li>你所从事的软件项目的类型对构建活动的前期准备有重大影响——许多项目应该是高度迭代式，某些应该是序列式的。</li>
-<li>如果没有明确的问题定义，那么你可能会在构建期间解决错误的问题。</li>
-<li>如果没有做完良好的需求分析工作，你可能没能觉察待解决的问题的重要细节。如果需求变更发生在构建之后的阶段，其代价是“在项目早期更改需求”的20倍至100倍。因此开始编程之前，你要确认“需求”已经到位了。</li>
-<li>如果没有做完良好的架构设计，你可能会在构建期间用错误的方法解决正确的问题。架构变更的代价随着“为错误的架构编写的代码数量”增加而增加，因此，也要确认“架构”已经到位了。</li>
-<li>理解项目的前期准备所采用的方法，并相应的选择架构方法。</li>
+<h3 id="swift中实现自定义打印log的方法："><a href="#swift中实现自定义打印log的方法：" class="headerlink" title="swift中实现自定义打印log的方法："></a>swift中实现自定义打印log的方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func XYLog&lt;T&gt;(message: T, fileName: String = #file, methodName: String = #function, lineNum: Int = #line)</span><br><span class="line">&#123;</span><br><span class="line">    #if DEBUG</span><br><span class="line">        print(&quot;\(methodName)[\(lineNum)]:\(message)&quot;);</span><br><span class="line">    #endif</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ul>
+<li>在3.0之前，文件路径用__FILE__,方法名用__FUNCTION__,行号用__LINE__</li>
+<li>3.0往后，文件路径用#file,方法名#function,行号用#line，更方便更贴切</li>
 </ul>
+<p>方法写好之后还要再设置DEBUG标记才能实现调试时显示，发布时隐藏，如图：<br><img src="/images/DebugFlag.png" alt="DebugFlag.png"></p>
+<p>设置好之后我们在这里切换Debug和Release模式下分别运行就可以测试，<br><img src="/images/switchModel.png" alt="DebugFlag.png"><br>Debug调试模式下能够输出打印log，Release模式下则不会输出</p>
+<p>我在第18行调用了上面方法，分别在两种模式下运行结果如图：<br>debug<br><img src="/images/debug.png" alt="debug.png"></p>
+<p>Release<br><img src="/images/release.png" alt="release.png"></p>
 
       
     </div>
@@ -416,7 +382,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/代码大全2/" rel="tag">#代码大全2</a>
+            <a href="/tags/swift/" rel="tag">#swift</a>
+          
+            <a href="/tags/log/" rel="tag">#log</a>
           
         </div>
       
@@ -425,17 +393,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/12/29/dbs/" rel="next" title="苹果开发者账号邓白氏码申请注意事项">
-                <i class="fa fa-chevron-left"></i> 苹果开发者账号邓白氏码申请注意事项
+              <a href="/2016/06/21/swift2/" rel="next" title="swift 3.0（二）：整型、浮点型">
+                <i class="fa fa-chevron-left"></i> swift 3.0（二）：整型、浮点型
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/01/05/code2/" rel="prev" title="《代码大全2》要点摘要（二）">
-                《代码大全2》要点摘要（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,8 +425,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/01/02/code1/"
-           data-title="《代码大全2》要点摘要（一）" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2015/01/02/code1/">
+      <div class="ds-thread" data-thread-key="2016/06/22/swiftlog/"
+           data-title="swift项目开发中如何自定义log" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/">
       </div>
     
   </div>
@@ -616,7 +580,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建活动中的具体任务（task）"><span class="nav-number">1.</span> <span class="nav-text">构建活动中的具体任务（task）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章、要点"><span class="nav-number">2.</span> <span class="nav-text">第一章、要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章、-隐喻的力量"><span class="nav-number">3.</span> <span class="nav-text">第二章、 隐喻的力量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章、三思而后行：前期准备"><span class="nav-number">4.</span> <span class="nav-text">第三章、三思而后行：前期准备</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用系统函数打印log的弊端"><span class="nav-number">1.</span> <span class="nav-text">使用系统函数打印log的弊端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swift中实现自定义打印log的方法："><span class="nav-number">2.</span> <span class="nav-text">swift中实现自定义打印log的方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">2.1.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
