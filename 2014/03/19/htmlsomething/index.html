@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="swift,log," />
+  <meta name="keywords" content="html," />
 
 
 
@@ -86,30 +86,28 @@
 
 
 
-<meta name="description" content="使用系统函数打印log的弊端
-非常消耗性能
-如果app部署到AppStore之后用户是看不到log内容的
-所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
+<meta name="description" content="一、我对语义化的一些理解
+1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift项目开发中如何自定义log">
-<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/index.html">
+<meta property="og:title" content="HTML的一些注意事项">
+<meta property="og:url" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/03/19/htmlsomething/index.html">
 <meta property="og:site_name" content="Zxy's Note">
-<meta property="og:description" content="使用系统函数打印log的弊端
-非常消耗性能
-如果app部署到AppStore之后用户是看不到log内容的
-所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/DebugFlag.png">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/switchModel.png">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/debug.png">
-<meta property="og:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/release.png">
-<meta property="og:updated_time" content="2016-06-22T07:40:55.000Z">
+<meta property="og:description" content="一、我对语义化的一些理解
+1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异">
+<meta property="og:updated_time" content="2016-08-28T16:50:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift项目开发中如何自定义log">
-<meta name="twitter:description" content="使用系统函数打印log的弊端
-非常消耗性能
-如果app部署到AppStore之后用户是看不到log内容的
-所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现">
-<meta name="twitter:image" content="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/images/DebugFlag.png">
+<meta name="twitter:title" content="HTML的一些注意事项">
+<meta name="twitter:description" content="一、我对语义化的一些理解
+1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异">
 
 
 
@@ -127,7 +125,7 @@
   };
 </script>
 
-  <title> swift项目开发中如何自定义log | Zxy's Note </title>
+  <title> HTML的一些注意事项 | Zxy's Note </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +265,7 @@
             
             
               
-                swift项目开发中如何自定义log
+                HTML的一些注意事项
               
             
           </h1>
@@ -279,8 +277,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-22T15:33:09+08:00" content="2016-06-22">
-              2016-06-22
+            <time itemprop="dateCreated" datetime="2014-03-19T00:00:09+08:00" content="2014-03-19">
+              2014-03-19
             </time>
           </span>
 
@@ -293,8 +291,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/swift/" itemprop="url" rel="index">
-                    <span itemprop="name">swift</span>
+                  <a href="/categories/html/" itemprop="url" rel="index">
+                    <span itemprop="name">html</span>
                   </a>
                 </span>
 
@@ -309,8 +307,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/22/swiftlog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/swiftlog/" itemprop="commentsCount"></span>
+                <a href="/2014/03/19/htmlsomething/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/19/htmlsomething/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -320,7 +318,7 @@
 
           
           
-             <span id="/2016/06/22/swiftlog/" class="leancloud_visitors" data-flag-title="swift项目开发中如何自定义log">
+             <span id="/2014/03/19/htmlsomething/" class="leancloud_visitors" data-flag-title="HTML的一些注意事项">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -342,25 +340,78 @@
       
 
       
-        <h3 id="使用系统函数打印log的弊端"><a href="#使用系统函数打印log的弊端" class="headerlink" title="使用系统函数打印log的弊端"></a>使用系统函数打印log的弊端</h3><ul>
-<li>非常消耗性能</li>
-<li>如果app部署到AppStore之后用户是看不到log内容的</li>
-<li>所以我们只需要在debug开发调试阶段显示log，部署阶段隐藏log，在oc时代我们可以通过下面的方式实现</li>
+        <h2 id="一、我对语义化的一些理解"><a href="#一、我对语义化的一些理解" class="headerlink" title="一、我对语义化的一些理解"></a>一、我对语义化的一些理解</h2><ul>
+<li>1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构</li>
+<li>2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；</li>
+<li>3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；</li>
+<li>4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。</li>
 </ul>
-<a id="more"></a>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#if DEBUG</span><br><span class="line">#define MyLog(id, ...) NSLog((@\&quot;%s [Line %d] \&quot; id),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);</span><br><span class="line">#else</span><br><span class="line">#define MyLog(id, ...)</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<h2 id="二、Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><a href="#二、Doctype作用-严格模式与混杂模式如何区分？它们有何意义" class="headerlink" title="二、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?"></a>二、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h2><ul>
+<li>（1）、&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于 <html> 标签之前。告知浏览器以何种模式来渲染文档。 </html></li>
+</ul>
 <ul>
-<li>但在swift中没有宏的概念了，我们要怎样实现上述需求呢？</li>
+<li><p>（2）、严格模式的排版和 JS 运作模式是  以该浏览器支持的最高标准运行。</p>
+</li>
+<li><p>（3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</p>
+</li>
+<li><p>（4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</p>
+</li>
 </ul>
-<h3 id="swift中实现自定义打印log的方法："><a href="#swift中实现自定义打印log的方法：" class="headerlink" title="swift中实现自定义打印log的方法："></a>swift中实现自定义打印log的方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func XYLog&lt;T&gt;(message: T, fileName: String = #file, methodName: String = #function, lineNum: Int = #line)</span><br><span class="line">&#123;</span><br><span class="line">    #if DEBUG</span><br><span class="line">        print(&quot;\(methodName)[\(lineNum)]:\(message)&quot;);</span><br><span class="line">    #endif</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ul>
-<li>在3.0之前，文件路径用__FILE__,方法名用__FUNCTION__,行号用__LINE__</li>
-<li>3.0往后，文件路径用#file,方法名#function,行号用#line，更方便更贴切</li>
+<h2 id="三、文档声明头"><a href="#三、文档声明头" class="headerlink" title="三、文档声明头"></a>三、文档声明头</h2><ul>
+<li><p>任何一个标准的HTML页面，第一行一定是一个以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE ……</span><br></pre></td></tr></table></figure>
+<p>开头的语句。<br>这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。<br>到底有哪些规范呢？<br>首先我们先确定一件事儿，我们现在最常用的的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。现在由于手机、移动端的普及，响应式H5移动web端已经成为主流。<br>HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：<br>HTML4.01里面规定了普通、XHTML两大种规范。<br>HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？<br></p><h1></h1><br>所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。<br>总结一下，一共有6种DTD，说白了，HTML第一行语句一共有6种：<p></p>
+</li>
 </ul>
-<p>方法写好之后还要再设置DEBUG标记才能实现调试时显示，发布时隐藏，如图：<br><img src="/images/DebugFlag.png" alt="DebugFlag.png"></p>
-<p>设置好之后我们在这里切换Debug和Release模式下分别运行就可以测试，<br><img src="/images/switchModel.png" alt="DebugFlag.png"><br>Debug调试模式下能够输出打印log，Release模式下则不会输出</p>
-<p>我在第18行调用了上面方法，分别在两种模式下运行结果如图：<br>debug<br><img src="/images/debug.png" alt="debug.png"></p>
-<p>Release<br><img src="/images/release.png" alt="release.png"></p>
+<table>
+<thead>
+<tr>
+<th>大规范</th>
+<th style="text-align:center">里面的小规范</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML4.01</td>
+<td style="text-align:center">Strict        严格的，体现在一些标签不能使用，比如u，Transitional   普通的，Frameset     带有框架的页面</td>
+</tr>
+<tr>
+<td>XHTML1.0严格体现在小写标签、闭合、引号</td>
+<td style="text-align:center">Strict          严格的，体现在一些标签不能使用，比如u，Transitional    普通的，Frameset      带有框架的页面</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>strict表示“严格的”，这种模式里面的要求更为严格。这种严格体现在哪里？有一些标签不能使用。<br>比如，u标签，就是可以让一个本文加上下划线，但是这和HTML的本质有冲突，因为HTML只能负责语义，不能负责样式，而u这个下划线是样式。所以，在strict中是不能使用u标签的。</li>
+</ul>
+<ul>
+<li>Transitional 表示“普通的”，这种模式就是没有一些别的规范。</li>
+<li>Frameset 表示“框架”，在框架的页面使用</li>
+<li>HTML5中极大的简化了DTD，也就是说HTML5中就没有XHTML了（W3C自己打脸了）：<br>&lt;!DOCTYPE html&gt;</li>
+</ul>
+<h2 id="四、字符集"><a href="#四、字符集" class="headerlink" title="四、字符集"></a>四、字符集</h2><p><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><br>字符集用meta标签定义，meta表示“元”。“元”配置，就是表示基本的配置项目。<br>charset就是charactor set“字符集”的意思。<br>中文能够使用的字符集两种：<br>第一种：UTF-8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;</span><br><span class="line">第二种：gb2312</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=gb2312&quot;&gt;</span><br><span class="line">也可以写成gbk</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=gbk&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>常用的两种字符集UTF-8和gb2312。</p>
+<ul>
+<li>UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……</li>
+</ul>
+<ul>
+<li>gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。</li>
+</ul>
+<p>字库规模：  UTF-8（字全） &gt; gb2312（只有汉字</p>
+<p>注意，由于UTF-8里面保存了世界上所有人类语言，所以描述一个汉字需要的码更多。<br>UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。</p>
+<p>保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）</p>
+<p>总结：<br>UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；<br>gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。</p>
+<p>列出2个使用情形：<br>1） 如果公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。<br>2） 如果公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。</p>
+<p>亲测：<br>● qq网、网易、搜狐都是使用gb2312。这些公司，都追求显示速度。<br>● 新华网藏语频道，使用的是UTF-8，保证字符集的数量。</p>
+<h2 id="五、空白折叠现象"><a href="#五、空白折叠现象" class="headerlink" title="五、空白折叠现象"></a>五、空白折叠现象</h2><p>HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。</p>
+<h2 id="六、常用HTML标签的分类"><a href="#六、常用HTML标签的分类" class="headerlink" title="六、常用HTML标签的分类"></a>六、常用HTML标签的分类</h2><p>HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。<br>顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。</p>
+<p>p标签是一个文本级标签，所以p里面只能放文字、图片、表单元素。其他的一律不能放。</p>
+<ul>
+<li>文本级：p、span、a、b、i、u、em</li>
+<li>容器级：div、h系列、li、dt、dd<br>而按照CSS的块级元素和行内元素划分的话：</li>
+<li>行内元素：span、a、b、i、u、em</li>
+<li>块级元素：div、h系列、li、dt、dd、p</li>
+</ul>
 
       
     </div>
@@ -382,9 +433,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/swift/" rel="tag">#swift</a>
-          
-            <a href="/tags/log/" rel="tag">#log</a>
+            <a href="/tags/html/" rel="tag">#html</a>
           
         </div>
       
@@ -393,16 +442,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/21/swift2/" rel="next" title="swift 3.0（二）：整型、浮点型">
-                <i class="fa fa-chevron-left"></i> swift 3.0（二）：整型、浮点型
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/22/xcodeBuildNewFile/" rel="prev" title="xcode中快速定位文件目录并创建文件方法">
-                xcode中快速定位文件目录并创建文件方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2014/12/23/helloworld/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -429,8 +474,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/22/swiftlog/"
-           data-title="swift项目开发中如何自定义log" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/swiftlog/">
+      <div class="ds-thread" data-thread-key="2014/03/19/htmlsomething/"
+           data-title="HTML的一些注意事项" data-url="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/03/19/htmlsomething/">
       </div>
     
   </div>
@@ -584,7 +629,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用系统函数打印log的弊端"><span class="nav-number">1.</span> <span class="nav-text">使用系统函数打印log的弊端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swift中实现自定义打印log的方法："><span class="nav-number">2.</span> <span class="nav-text">swift中实现自定义打印log的方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">2.1.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、我对语义化的一些理解"><span class="nav-number">1.</span> <span class="nav-text">一、我对语义化的一些理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><span class="nav-number">2.</span> <span class="nav-text">二、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文档声明头"><span class="nav-number">3.</span> <span class="nav-text">三、文档声明头</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#四、字符集"><span class="nav-number">1.</span> <span class="nav-text">四、字符集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、空白折叠现象"><span class="nav-number">2.</span> <span class="nav-text">五、空白折叠现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、常用HTML标签的分类"><span class="nav-number">3.</span> <span class="nav-text">六、常用HTML标签的分类</span></a></li></ol></div>
             
           </div>
         </section>

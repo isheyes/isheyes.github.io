@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/"/>
-  <updated>2016-06-22T07:40:55.000Z</updated>
+  <updated>2016-06-22T08:02:31.000Z</updated>
   <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xcode中快速定位文件目录并创建文件方法</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/xcodeBuildNewFile/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2016/06/22/xcodeBuildNewFile/</id>
+    <published>2016-06-22T08:00:09.000Z</published>
+    <updated>2016-06-22T08:02:31.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;1、快速定位到目录快捷键&quot;&gt;&lt;a href=&quot;#1、快速定位到目录快捷键&quot; class=&quot;headerlink&quot; title=&quot;1、快速定位到目录快捷键&quot;&gt;&lt;/a&gt;1、快速定位到目录快捷键&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;command + shift + j&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2、通过⬆️⬇️控制选中的目录&quot;&gt;&lt;a href=&quot;#2、通过⬆️⬇️控制选中的目录&quot; class=&quot;headerlink&quot; title=&quot;2、通过⬆️⬇️控制选中的目录&quot;&gt;&lt;/a&gt;2、通过⬆️⬇️控制选中的目录&lt;/h3&gt;&lt;h3 id=&quot;3、按下回车进入目录编辑模式，并command-c拷贝目录名称&quot;&gt;&lt;a href=&quot;#3、按下回车进入目录编辑模式，并command-c拷贝目录名称&quot; class=&quot;headerlink&quot; title=&quot;3、按下回车进入目录编辑模式，并command+c拷贝目录名称&quot;&gt;&lt;/a&gt;3、按下回车进入目录编辑模式，并command+c拷贝目录名称&lt;/h3&gt;&lt;h3 id=&quot;4、新建文件&quot;&gt;&lt;a href=&quot;#4、新建文件&quot; class=&quot;headerlink&quot; title=&quot;4、新建文件&quot;&gt;&lt;/a&gt;4、新建文件&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;command + n&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;5、把上步拷贝的文件夹名称command-v粘贴到要创建的文件名上&quot;&gt;&lt;a href=&quot;#5、把上步拷贝的文件夹名称command-v粘贴到要创建的文件名上&quot; class=&quot;headerlink&quot; title=&quot;5、把上步拷贝的文件夹名称command+v粘贴到要创建的文件名上&quot;&gt;&lt;/a&gt;5、把上步拷贝的文件夹名称command+v粘贴到要创建的文件名上&lt;/h3&gt;&lt;h3 id=&quot;最后只要下一步下一步就可以创建完成一个文件，创建多个重复以上即可，enjoy-it-！&quot;&gt;&lt;a href=&quot;#最后只要下一步下一步就可以创建完成一个文件，创建多个重复以上即可，enjoy-it-！&quot; class=&quot;headerlink&quot; title=&quot;最后只要下一步下一步就可以创建完成一个文件，创建多个重复以上即可，enjoy it~！~~&quot;&gt;&lt;/a&gt;最后只要下一步下一步就可以创建完成一个文件，创建多个重复以上即可，enjoy it~！~~&lt;/h3&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、快速定位到目录快捷键&quot;&gt;&lt;a href=&quot;#1、快速定位到目录快捷键&quot; class=&quot;headerlink&quot; title=&quot;1、快速定位到目录快捷键&quot;&gt;&lt;/a&gt;1、快速定位到目录快捷键&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;
+    
+    </summary>
+    
+      <category term="xcode" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/xcode/"/>
+    
+    
+      <category term="xcode" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/xcode/"/>
+    
+  </entry>
   
   <entry>
     <title>swift项目开发中如何自定义log</title>
@@ -834,6 +858,101 @@
     
     
       <category term="感悟" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML的一些注意事项</title>
+    <link href="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/03/19/htmlsomething/"/>
+    <id>http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/2014/03/19/htmlsomething/</id>
+    <published>2014-03-18T16:00:09.000Z</published>
+    <updated>2016-08-28T16:50:52.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;一、我对语义化的一些理解&quot;&gt;&lt;a href=&quot;#一、我对语义化的一些理解&quot; class=&quot;headerlink&quot; title=&quot;一、我对语义化的一些理解&quot;&gt;&lt;/a&gt;一、我对语义化的一些理解&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构&lt;/li&gt;
+&lt;li&gt;2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；&lt;/li&gt;
+&lt;li&gt;3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；&lt;/li&gt;
+&lt;li&gt;4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;二、Doctype作用-严格模式与混杂模式如何区分？它们有何意义&quot;&gt;&lt;a href=&quot;#二、Doctype作用-严格模式与混杂模式如何区分？它们有何意义&quot; class=&quot;headerlink&quot; title=&quot;二、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?&quot;&gt;&lt;/a&gt;二、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）、&amp;lt;!DOCTYPE&amp;gt; 声明位于文档中的最前面，处于 &lt;html&gt; 标签之前。告知浏览器以何种模式来渲染文档。 &lt;/html&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;（2）、严格模式的排版和 JS 运作模式是  以该浏览器支持的最高标准运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;三、文档声明头&quot;&gt;&lt;a href=&quot;#三、文档声明头&quot; class=&quot;headerlink&quot; title=&quot;三、文档声明头&quot;&gt;&lt;/a&gt;三、文档声明头&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;任何一个标准的HTML页面，第一行一定是一个以&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE ……&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;开头的语句。&lt;br&gt;这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。&lt;br&gt;到底有哪些规范呢？&lt;br&gt;首先我们先确定一件事儿，我们现在最常用的的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。现在由于手机、移动端的普及，响应式H5移动web端已经成为主流。&lt;br&gt;HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：&lt;br&gt;HTML4.01里面规定了普通、XHTML两大种规范。&lt;br&gt;HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？&lt;br&gt;&lt;/p&gt;&lt;h1&gt;&lt;/h1&gt;&lt;br&gt;所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。&lt;br&gt;总结一下，一共有6种DTD，说白了，HTML第一行语句一共有6种：&lt;p&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;大规范&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;里面的小规范&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;HTML4.01&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Strict        严格的，体现在一些标签不能使用，比如u，Transitional   普通的，Frameset     带有框架的页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;XHTML1.0严格体现在小写标签、闭合、引号&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Strict          严格的，体现在一些标签不能使用，比如u，Transitional    普通的，Frameset      带有框架的页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;strict表示“严格的”，这种模式里面的要求更为严格。这种严格体现在哪里？有一些标签不能使用。&lt;br&gt;比如，u标签，就是可以让一个本文加上下划线，但是这和HTML的本质有冲突，因为HTML只能负责语义，不能负责样式，而u这个下划线是样式。所以，在strict中是不能使用u标签的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Transitional 表示“普通的”，这种模式就是没有一些别的规范。&lt;/li&gt;
+&lt;li&gt;Frameset 表示“框架”，在框架的页面使用&lt;/li&gt;
+&lt;li&gt;HTML5中极大的简化了DTD，也就是说HTML5中就没有XHTML了（W3C自己打脸了）：&lt;br&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;四、字符集&quot;&gt;&lt;a href=&quot;#四、字符集&quot; class=&quot;headerlink&quot; title=&quot;四、字符集&quot;&gt;&lt;/a&gt;四、字符集&lt;/h2&gt;&lt;p&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;&lt;br&gt;字符集用meta标签定义，meta表示“元”。“元”配置，就是表示基本的配置项目。&lt;br&gt;charset就是charactor set“字符集”的意思。&lt;br&gt;中文能够使用的字符集两种：&lt;br&gt;第一种：UTF-8&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html;charset=UTF-8&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;第二种：gb2312&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html;charset=gb2312&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;也可以写成gbk&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html;charset=gbk&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;常用的两种字符集UTF-8和gb2312。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;字库规模：  UTF-8（字全） &amp;gt; gb2312（只有汉字&lt;/p&gt;
+&lt;p&gt;注意，由于UTF-8里面保存了世界上所有人类语言，所以描述一个汉字需要的码更多。&lt;br&gt;UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。&lt;/p&gt;
+&lt;p&gt;保存大小：   UTF-8（更臃肿、加载更慢） &amp;gt; gb2312 （更小巧，加载更快）&lt;/p&gt;
+&lt;p&gt;总结：&lt;br&gt;UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；&lt;br&gt;gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。&lt;/p&gt;
+&lt;p&gt;列出2个使用情形：&lt;br&gt;1） 如果公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。&lt;br&gt;2） 如果公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。&lt;/p&gt;
+&lt;p&gt;亲测：&lt;br&gt;● qq网、网易、搜狐都是使用gb2312。这些公司，都追求显示速度。&lt;br&gt;● 新华网藏语频道，使用的是UTF-8，保证字符集的数量。&lt;/p&gt;
+&lt;h2 id=&quot;五、空白折叠现象&quot;&gt;&lt;a href=&quot;#五、空白折叠现象&quot; class=&quot;headerlink&quot; title=&quot;五、空白折叠现象&quot;&gt;&lt;/a&gt;五、空白折叠现象&lt;/h2&gt;&lt;p&gt;HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。&lt;/p&gt;
+&lt;h2 id=&quot;六、常用HTML标签的分类&quot;&gt;&lt;a href=&quot;#六、常用HTML标签的分类&quot; class=&quot;headerlink&quot; title=&quot;六、常用HTML标签的分类&quot;&gt;&lt;/a&gt;六、常用HTML标签的分类&lt;/h2&gt;&lt;p&gt;HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。&lt;br&gt;顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。&lt;/p&gt;
+&lt;p&gt;p标签是一个文本级标签，所以p里面只能放文字、图片、表单元素。其他的一律不能放。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文本级：p、span、a、b、i、u、em&lt;/li&gt;
+&lt;li&gt;容器级：div、h系列、li、dt、dd&lt;br&gt;而按照CSS的块级元素和行内元素划分的话：&lt;/li&gt;
+&lt;li&gt;行内元素：span、a、b、i、u、em&lt;/li&gt;
+&lt;li&gt;块级元素：div、h系列、li、dt、dd、p&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、我对语义化的一些理解&quot;&gt;&lt;a href=&quot;#一、我对语义化的一些理解&quot; class=&quot;headerlink&quot; title=&quot;一、我对语义化的一些理解&quot;&gt;&lt;/a&gt;一、我对语义化的一些理解&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1，去掉或者丢失样式的时候能够让页面呈现出清晰的
+    
+    </summary>
+    
+      <category term="html" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/categories/html/"/>
+    
+    
+      <category term="html" scheme="http://tva3.sinaimg.cn/crop.0.0.233.233.180/c33351cbjw8f1v28nvy92j206j06iglx.jpg/tags/html/"/>
     
   </entry>
   
