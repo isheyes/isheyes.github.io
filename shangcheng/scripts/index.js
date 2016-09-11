@@ -1,16 +1,16 @@
 
 
 
-//Ò³ÃæµÄÒµÎñÂß¼­
+//Ã’Â³ÃƒÃ¦ÂµÃ„Ã’ÂµÃÃ±Ã‚ÃŸÂ¼Â­
 $(document).ready(function(){
 
 
-    /*¿ªÊ¼±à³Ì*/
-    /*²úÆ·Ïà¹Ø*/
-    /*ÊµÀı»¯*/
+    /*Â¿ÂªÃŠÂ¼Â±Ã Â³ÃŒ*/
+    /*Â²ÃºÃ†Â·ÃÃ Â¹Ã˜*/
+    /*ÃŠÂµÃ€Ã½Â»Â¯*/
     var product =  new Product()
-    product.name='HMĞİÏĞ·şµÇÉ½°ü55'
-    product.description='°ô°ôµÄ£¬°ô°ôµÄ£¬µÇÉ½Ò»Á÷£¬·şÎñÒ»Á÷£¬ÄãºÃ£¬ÎÒºÃ£¬ËûÒ²ºÃ£¬Ì«°ôÁË£¬Ò»¿ÚÆøµÈÉÏÖéÄÂÀÊÂê·å'
+    product.name='HMä¼‘é—²æœç™»å±±åŒ…'
+    product.description='æ£’æ£’çš„ï¼Œæ£’æ£’çš„ï¼Œç™»å±±ä¸€æµï¼ŒæœåŠ¡ä¸€æµï¼Œä½ å¥½ï¼Œæˆ‘å¥½ï¼Œä»–ä¹Ÿå¥½ï¼Œå¤ªæ£’äº†ï¼Œä¸€å£æ°”ç­‰ä¸Šç ç©†æœ—ç›å³°'
     product.normalPrice=144
     product.groupbuyPrice=120
     product.buySum=100;
@@ -19,17 +19,17 @@ $(document).ready(function(){
         {small:'images/s12.jpg',big:'images/s12.jpg'},
         {small:'images/s13.jpg',big:'images/s13.jpg'}
     ]
-    /*Ê¹ÓÃ¶ÔÏóÖĞµÄ·½·¨ÊôĞÔ*/
+    /*ÃŠÂ¹Ã“ÃƒÂ¶Ã”ÃÃ³Ã–ÃÂµÃ„Â·Â½Â·Â¨ÃŠÃ´ÃÃ”*/
     product.bindDOMDetail()
     product.bindDOMImage()
 
-    /*°ó¶¨ÊÂ¼ş*/
+    /*Â°Ã³Â¶Â¨ÃŠÃ‚Â¼Ã¾*/
     $('#btnaddcart').click(function(){
-        /*¹ºÎï³µĞÂÔöÒ»¸ö²úÆ·*/
+        /*Â¹ÂºÃÃ¯Â³ÂµÃÃ‚Ã”Ã¶Ã’Â»Â¸Ã¶Â²ÃºÃ†Â·*/
         console.log('12222')
         cart.products.push(product)
-        ///*¸üĞÂ¹ºÎï³µ - ÖØĞÂ°ó¶¨¹ºÎï³µ*/
-        /*Èç¹û²»·â×°£¬ÕâÀï¾Í¿ÉÄÜ²úÉú´úÂëÖØ¸´*/
+        ///*Â¸Ã¼ÃÃ‚Â¹ÂºÃÃ¯Â³Âµ - Ã–Ã˜ÃÃ‚Â°Ã³Â¶Â¨Â¹ÂºÃÃ¯Â³Âµ*/
+        /*ÃˆÃ§Â¹Ã»Â²Â»Â·Ã¢Ã—Â°Â£Â¬Ã•Ã¢Ã€Ã¯Â¾ÃÂ¿Ã‰Ã„ÃœÂ²ÃºÃ‰ÃºÂ´ÃºÃ‚Ã«Ã–Ã˜Â¸Â´*/
         cart.bindBasic()
         cart.bindList()
         $(window).scrollTop(0);
@@ -39,17 +39,17 @@ $(document).ready(function(){
 
 
 
-    /*ÊµÀı¹ºÎï³µ*/
+    /*ÃŠÂµÃ€Ã½Â¹ÂºÃÃ¯Â³Âµ*/
     var cart =  new Cart()
     cart.sum=3
     cart.allPrice=2000
 
-    /*¼ÙÉè¹ºÎï³µÖĞÒÑ¾­ÓĞÈı¸ö²úÆ·*/
+    /*Â¼Ã™Ã‰Ã¨Â¹ÂºÃÃ¯Â³ÂµÃ–ÃÃ’Ã‘Â¾Â­Ã“ÃÃˆÃ½Â¸Ã¶Â²ÃºÃ†Â·*/
     cart.products.push(product)
     cart.products.push(product)
     cart.products.push(product)
 
-    /*Ê¹ÓÃ¶ÔÏóÖĞµÄ·½·¨ÊôĞÔ*/
+    /*ÃŠÂ¹Ã“ÃƒÂ¶Ã”ÃÃ³Ã–ÃÂµÃ„Â·Â½Â·Â¨ÃŠÃ´ÃÃ”*/
     cart.bindBasic()
     cart.bindList()
 
